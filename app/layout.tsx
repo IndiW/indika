@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Indika Wijesundera",
+  title: "Indika's Space",
   description: "Personal canvas — explore, draw, and play around.",
 };
 
