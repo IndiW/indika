@@ -287,9 +287,9 @@ function DefaultContent() {
         pointerEvents="all"
         style={{ cursor: "pointer" }}
         onPointerDown={stopProp}
-        onClick={() => window.open("mailto:indikawijesundera@gmail.com")}
+        onClick={() => window.open("https://www.linkedin.com/in/indika-wijesundera/")}
       >
-        indikawijesundera@gmail.com ↗
+        linkedin.com/in/indika-wijesundera ↗
       </text>
     </g>
   );
