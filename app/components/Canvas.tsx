@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 type Path = { id: string; d: string };
 type Img = {
@@ -158,10 +159,11 @@ function getInitialView(): { x: number; y: number; s: number } {
 }
 
 // ── Default portfolio content ─────────────────────────────────────────────────
-const PROJECTS = [
+const PROJECTS: { name: string; desc: string; href?: string }[] = [
   { name: "Wijelaw", desc: "Law firm website" },
   { name: "Dr. Kemi", desc: "Medical practice website" },
   { name: "Athena", desc: "Study App" },
+  { name: "Flashcards", desc: "Study anything. Scroll endlessly.", href: "/flashcards" },
 ];
 
 function DefaultContent() {
@@ -225,23 +227,43 @@ function DefaultContent() {
       >
         SELECTED WORK
       </text>
-      {PROJECTS.map(({ name, desc }, i) => (
-        <text
-          key={name}
-          x={0}
-          y={232 + i * 30}
-          fontSize={14}
-          pointerEvents="none"
-        >
-          <tspan fill={THEME.accent} fontWeight={600}>
-            {name}
-          </tspan>
-          <tspan fill={THEME.text.dim}>
-            {"  ·  "}
-            {desc}
-          </tspan>
-        </text>
-      ))}
+      {PROJECTS.map(({ name, desc, href }, i) => {
+        const y = 232 + i * 30;
+        if (href) {
+          return (
+            <foreignObject
+              key={name}
+              x={0}
+              y={y - 13}
+              width={540}
+              height={20}
+              onPointerDown={(e: React.PointerEvent) => e.stopPropagation()}
+            >
+              <Link
+                href={href}
+                style={{
+                  display: "flex",
+                  alignItems: "baseline",
+                  fontSize: 14,
+                  fontFamily: font,
+                  textDecoration: "none",
+                  lineHeight: "20px",
+                  cursor: "pointer",
+                }}
+              >
+                <span style={{ color: THEME.accent, fontWeight: 600 }}>{name}</span>
+                <span style={{ color: THEME.text.dim }}>{"  ·  "}{desc}</span>
+              </Link>
+            </foreignObject>
+          );
+        }
+        return (
+          <text key={name} x={0} y={y} fontSize={14} pointerEvents="none">
+            <tspan fill={THEME.accent} fontWeight={600}>{name}</tspan>
+            <tspan fill={THEME.text.dim}>{"  ·  "}{desc}</tspan>
+          </text>
+        );
+      })}
 
       <line
         x1={0}
