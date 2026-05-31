@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function FlashcardsPage() {
   return (
-    <main className="h-dvh" style={{ background: 'var(--fc-bg)' }}>
+    <main className="h-dvh overflow-hidden" style={{ position: 'fixed', inset: 0, background: 'var(--fc-bg)' }}>
       <FlashCardFeed />
     </main>
   );
