@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html><body style="background:#333;margin:8px">
+<p style="color:white">If transparent: should see dark background around duck</p>
+<canvas id="c" width="800" height="300" style="border:1px solid #888"></canvas>
+<script>
+const img = new Image();
+img.onload = () => {
+  const c = document.getElementById('c');
+  const ctx = c.getContext('2d');
+  ctx.fillStyle = '#333';
+  ctx.fillRect(0, 0, 800, 300);
+  // Draw cell row=1, col=1 (South-A STANDING) at 2x
+  ctx.imageSmoothingEnabled = false;
+  ctx.drawImage(img, 1*176, 1*128, 176, 128, 10, 10, 352, 256);
+  // Also draw on red background to see alpha
+  ctx.fillStyle = 'red';
+  ctx.fillRect(400, 0, 400, 300);
+  ctx.drawImage(img, 1*176, 1*128, 176, 128, 410, 10, 352, 256);
+};
+img.src = '/ddg_sprite_map.png';
+</script></body></html>

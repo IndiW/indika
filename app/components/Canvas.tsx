@@ -164,6 +164,7 @@ const PROJECTS: { name: string; desc: string; href?: string }[] = [
   { name: "Dr. Kemi", desc: "Medical practice website" },
   { name: "Athena", desc: "Study App" },
   { name: "Flashcards", desc: "Study anything. Scroll endlessly.", href: "/flashcards" },
+  { name: "Duck Duck Goose", desc: "Ranked Duck Duck Goose.", href: "/duck-duck-goose" },
 ];
 
 function DefaultContent() {
