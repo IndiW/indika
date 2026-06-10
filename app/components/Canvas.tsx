@@ -159,10 +159,10 @@ function getInitialView(): { x: number; y: number; s: number } {
 }
 
 // ── Default portfolio content ─────────────────────────────────────────────────
-const PROJECTS: { name: string; desc: string; href?: string }[] = [
-  { name: "Wijelaw", desc: "Law firm website" },
-  { name: "Dr. Kemi", desc: "Medical practice website" },
-  { name: "Athena", desc: "Study App" },
+const PROJECTS: { name: string; desc: string; href?: string; external?: boolean }[] = [
+  { name: "Wijelaw", desc: "Law firm website", href: "https://wijelaw.com", external: true },
+  { name: "Dr. Kemi", desc: "Medical practice website", href: "https://drkemi.ca", external: true },
+  { name: "Athena", desc: "Study App", href: "https://indiw.github.io/athena", external: true },
   { name: "Flashcards", desc: "Study anything. Scroll endlessly.", href: "/flashcards" },
   { name: "Duck Duck Goose", desc: "Ranked Duck Duck Goose.", href: "/duck-duck-goose" },
 ];
@@ -228,9 +228,12 @@ function DefaultContent() {
       >
         SELECTED WORK
       </text>
-      {PROJECTS.map(({ name, desc, href }, i) => {
+      {PROJECTS.map(({ name, desc, href, external }, i) => {
         const y = 232 + i * 30;
         if (href) {
+          const linkProps = external
+            ? { target: "_blank", rel: "noopener noreferrer" }
+            : {};
           return (
             <foreignObject
               key={name}
@@ -242,6 +245,7 @@ function DefaultContent() {
             >
               <Link
                 href={href}
+                {...linkProps}
                 style={{
                   display: "flex",
                   alignItems: "baseline",
