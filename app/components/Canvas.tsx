@@ -162,7 +162,7 @@ function getInitialView(): { x: number; y: number; s: number } {
 const PROJECTS: { name: string; desc: string; href?: string; external?: boolean }[] = [
   { name: "Wijelaw", desc: "Law firm website", href: "https://wijelaw.com", external: true },
   { name: "Dr. Kemi", desc: "Medical practice website", href: "https://drkemi.ca", external: true },
-  { name: "Athena", desc: "Study App", href: "https://indiw.github.io/athena", external: true },
+  { name: "Athena", desc: "Focus desk — timer, todos, health", href: "/athena" },
   { name: "Flashcards", desc: "Study anything. Scroll endlessly.", href: "/flashcards" },
   { name: "Duck Duck Goose", desc: "Ranked Duck Duck Goose.", href: "/duck-duck-goose" },
 ];
