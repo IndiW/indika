@@ -96,7 +96,8 @@ function chaikin(pts: [number, number][]): [number, number][] {
   if (pts.length < 3) return pts;
   const out: [number, number][] = [pts[0]];
   for (let i = 0; i < pts.length - 1; i++) {
-    const [x0, y0] = pts[i], [x1, y1] = pts[i + 1];
+    const [x0, y0] = pts[i],
+      [x1, y1] = pts[i + 1];
     out.push([x0 * 0.75 + x1 * 0.25, y0 * 0.75 + y1 * 0.25]);
     out.push([x0 * 0.25 + x1 * 0.75, y0 * 0.25 + y1 * 0.75]);
   }
@@ -117,7 +118,8 @@ function markerPath(raw: [number, number][]): string {
 
   const dists: number[] = [0];
   for (let i = 1; i < pts.length; i++) {
-    const dx = pts[i][0] - pts[i - 1][0], dy = pts[i][1] - pts[i - 1][1];
+    const dx = pts[i][0] - pts[i - 1][0],
+      dy = pts[i][1] - pts[i - 1][1];
     dists.push(dists[i - 1] + Math.sqrt(dx * dx + dy * dy));
   }
   const total = dists[dists.length - 1];
@@ -134,17 +136,27 @@ function markerPath(raw: [number, number][]): string {
     const d = dists[i];
     const t = Math.min(d / taperLen, (total - d) / taperLen, 1);
     const w = hw * t;
-    const prev = pts[Math.max(0, i - 1)], next = pts[Math.min(pts.length - 1, i + 1)];
-    const dx = next[0] - prev[0], dy = next[1] - prev[1];
+    const prev = pts[Math.max(0, i - 1)],
+      next = pts[Math.min(pts.length - 1, i + 1)];
+    const dx = next[0] - prev[0],
+      dy = next[1] - prev[1];
     const len = Math.sqrt(dx * dx + dy * dy) || 1;
-    const nx = -dy / len, ny = dx / len;
+    const nx = -dy / len,
+      ny = dx / len;
     left.push([pts[i][0] + nx * w, pts[i][1] + ny * w]);
     right.push([pts[i][0] - nx * w, pts[i][1] - ny * w]);
   }
 
   const f = ([x, y]: [number, number]) => `${x.toFixed(1)},${y.toFixed(1)}`;
   const outline = [...left, ...right.reverse()];
-  return `M${f(outline[0])} ` + outline.slice(1).map(p => `L${f(p)}`).join(" ") + " Z";
+  return (
+    `M${f(outline[0])} ` +
+    outline
+      .slice(1)
+      .map((p) => `L${f(p)}`)
+      .join(" ") +
+    " Z"
+  );
 }
 
 // ── Mobile-aware initial view ─────────────────────────────────────────────────
@@ -159,12 +171,44 @@ function getInitialView(): { x: number; y: number; s: number } {
 }
 
 // ── Default portfolio content ─────────────────────────────────────────────────
-const PROJECTS: { name: string; desc: string; href?: string; external?: boolean }[] = [
-  { name: "Wijelaw", desc: "Law firm website", href: "https://wijelaw.com", external: true },
-  { name: "Dr. Kemi", desc: "Medical practice website", href: "https://drkemi.ca", external: true },
-  { name: "Athena", desc: "Focus desk — timer, todos, health", href: "/athena" },
-  { name: "Flashcards", desc: "Study anything. Scroll endlessly.", href: "/flashcards" },
-  { name: "Duck Duck Goose", desc: "Ranked Duck Duck Goose.", href: "/duck-duck-goose" },
+const PROJECTS: {
+  name: string;
+  desc: string;
+  href?: string;
+  external?: boolean;
+}[] = [
+  {
+    name: "Wijelaw",
+    desc: "Law firm website",
+    href: "https://wijelaw.com",
+    external: true,
+  },
+  {
+    name: "Dr. Kemi",
+    desc: "Medical practice website",
+    href: "https://drkemi.ca",
+    external: true,
+  },
+  {
+    name: "Athena",
+    desc: "Focus desk — timer, todos, health",
+    href: "/athena",
+  },
+  {
+    name: "Flashcards",
+    desc: "Study anything. Scroll endlessly.",
+    href: "/flashcards",
+  },
+  {
+    name: "Duck Duck Goose",
+    desc: "Ranked Duck Duck Goose.",
+    href: "/duck-duck-goose",
+  },
+  {
+    name: "Optomdle",
+    desc: "WIP Wordle for optometry diagnoses.",
+    href: "/optomdle",
+  },
 ];
 
 function DefaultContent() {
@@ -208,10 +252,22 @@ function DefaultContent() {
       />
 
       {/* Bio */}
-      <text x={0} y={132} fontSize={14} fill={THEME.text.secondary} pointerEvents="none">
+      <text
+        x={0}
+        y={132}
+        fontSize={14}
+        fill={THEME.text.secondary}
+        pointerEvents="none"
+      >
         I ship full-stack products from zero to one — fast.
       </text>
-      <text x={0} y={154} fontSize={14} fill={THEME.text.muted} pointerEvents="none">
+      <text
+        x={0}
+        y={154}
+        fontSize={14}
+        fill={THEME.text.muted}
+        pointerEvents="none"
+      >
         More experience talking to Artificial Intelligences than Human
         Intelligences.
       </text>
@@ -256,16 +312,26 @@ function DefaultContent() {
                   cursor: "pointer",
                 }}
               >
-                <span style={{ color: THEME.accent, fontWeight: 600 }}>{name}</span>
-                <span style={{ color: THEME.text.dim }}>{"  ·  "}{desc}</span>
+                <span style={{ color: THEME.accent, fontWeight: 600 }}>
+                  {name}
+                </span>
+                <span style={{ color: THEME.text.dim }}>
+                  {"  ·  "}
+                  {desc}
+                </span>
               </Link>
             </foreignObject>
           );
         }
         return (
           <text key={name} x={0} y={y} fontSize={14} pointerEvents="none">
-            <tspan fill={THEME.accent} fontWeight={600}>{name}</tspan>
-            <tspan fill={THEME.text.dim}>{"  ·  "}{desc}</tspan>
+            <tspan fill={THEME.accent} fontWeight={600}>
+              {name}
+            </tspan>
+            <tspan fill={THEME.text.dim}>
+              {"  ·  "}
+              {desc}
+            </tspan>
           </text>
         );
       })}
@@ -314,7 +380,9 @@ function DefaultContent() {
         pointerEvents="all"
         style={{ cursor: "pointer" }}
         onPointerDown={stopProp}
-        onClick={() => window.open("https://www.linkedin.com/in/indika-wijesundera/")}
+        onClick={() =>
+          window.open("https://www.linkedin.com/in/indika-wijesundera/")
+        }
       >
         linkedin.com/in/indika-wijesundera ↗
       </text>
@@ -344,13 +412,25 @@ export default function Canvas() {
   const prevModeRef = useRef<Mode | null>(null); // mode before spacebar
   const imgSaveTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
   const historyRef = useRef<Array<{ paths: Path[]; images: Img[] }>>([]);
-  const activePointersRef = useRef<Map<number, { x: number; y: number }>>(new Map());
-  const pinchStateRef = useRef<{ dist: number; cx: number; cy: number } | null>(null);
+  const activePointersRef = useRef<Map<number, { x: number; y: number }>>(
+    new Map(),
+  );
+  const pinchStateRef = useRef<{ dist: number; cx: number; cy: number } | null>(
+    null,
+  );
 
-  useEffect(() => { modeRef.current = mode; }, [mode]);
-  useEffect(() => { selRef.current = sel; }, [sel]);
-  useEffect(() => { pathsRef.current = paths; }, [paths]);
-  useEffect(() => { imgsRef.current = images; }, [images]);
+  useEffect(() => {
+    modeRef.current = mode;
+  }, [mode]);
+  useEffect(() => {
+    selRef.current = sel;
+  }, [sel]);
+  useEffect(() => {
+    pathsRef.current = paths;
+  }, [paths]);
+  useEffect(() => {
+    imgsRef.current = images;
+  }, [images]);
 
   // ── Undo history ──────────────────────────────────────────────────────────
   const pushHistory = useCallback(() => {
@@ -572,7 +652,8 @@ export default function Canvas() {
     } else if (a.kind === "draw") {
       const w = toWorld(e.clientX, e.clientY);
       const last = livePointsRef.current[livePointsRef.current.length - 1];
-      const dx = w.x - last[0], dy = w.y - last[1];
+      const dx = w.x - last[0],
+        dy = w.y - last[1];
       if (dx * dx + dy * dy > 1) {
         livePointsRef.current.push([w.x, w.y]);
         liveRef.current = markerPath(livePointsRef.current);
@@ -674,29 +755,45 @@ export default function Canvas() {
   };
 
   // ── Shared image placement: FileReader → data URL → canvas ──────────────
-  const placeImageBlob = useCallback((blob: Blob, dropX?: number, dropY?: number) => {
-    const reader = new FileReader();
-    reader.onload = () => {
-      const dataUrl = reader.result as string;
-      const el = new Image();
-      el.onload = () => {
-        const v = vRef.current;
-        const maxW = 500 / v.s;
-        const sc = Math.min(1, maxW / el.naturalWidth);
-        const w = el.naturalWidth * sc;
-        const h = el.naturalHeight * sc;
-        const cx = dropX !== undefined ? (dropX - v.x) / v.s : (window.innerWidth / 2 - v.x) / v.s;
-        const cy = dropY !== undefined ? (dropY - v.y) / v.s : (window.innerHeight / 2 - v.y) / v.s;
-        pushHistory();
-        setImages((prev) => [
-          ...prev,
-          { id: crypto.randomUUID(), src: dataUrl, x: cx - w / 2, y: cy - h / 2, w, h },
-        ]);
+  const placeImageBlob = useCallback(
+    (blob: Blob, dropX?: number, dropY?: number) => {
+      const reader = new FileReader();
+      reader.onload = () => {
+        const dataUrl = reader.result as string;
+        const el = new Image();
+        el.onload = () => {
+          const v = vRef.current;
+          const maxW = 500 / v.s;
+          const sc = Math.min(1, maxW / el.naturalWidth);
+          const w = el.naturalWidth * sc;
+          const h = el.naturalHeight * sc;
+          const cx =
+            dropX !== undefined
+              ? (dropX - v.x) / v.s
+              : (window.innerWidth / 2 - v.x) / v.s;
+          const cy =
+            dropY !== undefined
+              ? (dropY - v.y) / v.s
+              : (window.innerHeight / 2 - v.y) / v.s;
+          pushHistory();
+          setImages((prev) => [
+            ...prev,
+            {
+              id: crypto.randomUUID(),
+              src: dataUrl,
+              x: cx - w / 2,
+              y: cy - h / 2,
+              w,
+              h,
+            },
+          ]);
+        };
+        el.src = dataUrl;
       };
-      el.src = dataUrl;
-    };
-    reader.readAsDataURL(blob);
-  }, [pushHistory]);
+      reader.readAsDataURL(blob);
+    },
+    [pushHistory],
+  );
 
   // ── Paste ─────────────────────────────────────────────────────────────────
   useEffect(() => {
@@ -884,13 +981,7 @@ export default function Canvas() {
               stroke="none"
             />
           ))}
-          {livePath && (
-            <path
-              d={livePath}
-              fill={THEME.stroke}
-              stroke="none"
-            />
-          )}
+          {livePath && <path d={livePath} fill={THEME.stroke} stroke="none" />}
           {images.map((img) => (
             <foreignObject
               key={img.id}
@@ -911,7 +1002,12 @@ export default function Canvas() {
               <img
                 src={img.src}
                 alt=""
-                style={{ width: "100%", height: "100%", display: "block", pointerEvents: "none" }}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  display: "block",
+                  pointerEvents: "none",
+                }}
               />
             </foreignObject>
           ))}
