@@ -89,7 +89,7 @@ const CASES: Case[] = [
     ],
   },
   {
-    diagnosis: "Glaucoma",
+    diagnosis: "Primary Open-Angle Glaucoma",
     hints: [
       "A 58-year-old presents for a routine exam and reports no visual symptoms whatsoever.",
       "IOP measures 26 mmHg OD and 24 mmHg OS on Goldmann applanation tonometry.",
@@ -100,7 +100,7 @@ const CASES: Case[] = [
     ],
   },
   {
-    diagnosis: "Cataracts",
+    diagnosis: "Nuclear Sclerotic Cataract",
     hints: [
       "A 71-year-old reports that their vision has become progressively foggy over the past two years.",
       "Glare from oncoming headlights while driving at night has become a significant concern.",
@@ -111,7 +111,7 @@ const CASES: Case[] = [
     ],
   },
   {
-    diagnosis: "Dry Eye Syndrome",
+    diagnosis: "Evaporative Dry Eye",
     hints: [
       "A 38-year-old office worker reports burning and stinging eyes that worsen throughout the day.",
       "Paradoxically, the patient's eyes water excessively despite the persistent burning sensation.",
@@ -122,7 +122,7 @@ const CASES: Case[] = [
     ],
   },
   {
-    diagnosis: "Conjunctivitis",
+    diagnosis: "Bacterial Conjunctivitis",
     hints: [
       "A 6-year-old is brought in after waking with one eye stuck completely shut.",
       "Mucopurulent discharge is present with heavy eyelid crusting along the lash margin.",
@@ -144,7 +144,7 @@ const CASES: Case[] = [
     ],
   },
   {
-    diagnosis: "Age-related Macular Degeneration",
+    diagnosis: "Wet Age-related Macular Degeneration",
     hints: [
       "A 74-year-old reports a blurry, dark spot that has developed in the centre of their vision.",
       "The Amsler grid test shows marked distortion — straight lines appear wavy or bent.",
@@ -155,7 +155,7 @@ const CASES: Case[] = [
     ],
   },
   {
-    diagnosis: "Diabetic Retinopathy",
+    diagnosis: "Proliferative Diabetic Retinopathy",
     hints: [
       "A 54-year-old with a 12-year history of type 2 diabetes presents for their annual eye exam.",
       "The patient currently reports no visual symptoms.",
@@ -166,7 +166,7 @@ const CASES: Case[] = [
     ],
   },
   {
-    diagnosis: "Amblyopia",
+    diagnosis: "Anisometropic Amblyopia",
     hints: [
       "A 7-year-old fails their school vision screening in the left eye only.",
       "Best corrected visual acuity is 20/20 OD and 20/80 OS with full spectacle correction in place.",
@@ -177,7 +177,7 @@ const CASES: Case[] = [
     ],
   },
   {
-    diagnosis: "Strabismus",
+    diagnosis: "Accommodative Esotropia",
     hints: [
       "Parents report their 4-year-old's left eye turns inward, particularly when the child is tired.",
       "The child never complains of seeing double.",
@@ -188,7 +188,7 @@ const CASES: Case[] = [
     ],
   },
   {
-    diagnosis: "Blepharitis",
+    diagnosis: "Demodex Blepharitis",
     hints: [
       "A 45-year-old presents with crusty, itchy eyelids that are worst every morning on waking.",
       "Collarettes — cylindrical, sleeve-like deposits — are visible at the base of multiple lashes.",
@@ -210,7 +210,7 @@ const CASES: Case[] = [
     ],
   },
   {
-    diagnosis: "Retinal Detachment",
+    diagnosis: "Rhegmatogenous Retinal Detachment",
     hints: [
       'A 55-year-old reports a "dark curtain" rising from the bottom of their visual field since this morning.',
       "This was preceded by three days of suddenly increased floaters and photopsia.",
@@ -490,6 +490,7 @@ const ALL_DIAGNOSES = [
   "Exotropia",
   "Hypertropia",
   "Amblyopia",
+  "Anisometropic Amblyopia",
   "Convergence Insufficiency",
   "Convergence Excess",
   "Divergence Insufficiency",
@@ -642,28 +643,48 @@ const DIAGNOSIS_DEFS: Record<string, string> = {
     "Age-related loss of the crystalline lens's ability to change shape for near focus, typically beginning in the mid-40s.",
   Glaucoma:
     "A group of optic neuropathies characterised by progressive retinal ganglion cell loss, often associated with elevated intraocular pressure.",
+  "Primary Open-Angle Glaucoma":
+    "The most common form of glaucoma, characterised by open iridocorneal angles, elevated IOP, progressive RNFL thinning, and arcuate visual field loss — often asymptomatic until advanced.",
   Cataracts:
     "Clouding of the crystalline lens that leads to progressive, painless reduction in visual clarity, most commonly due to ageing.",
+  "Nuclear Sclerotic Cataract":
+    "Age-related hardening and yellowing of the lens nucleus causing progressive blur, glare, myopic shift, and colour desaturation — the most common cataract type in adults.",
   "Dry Eye Syndrome":
     "A multifactorial disease of the tear film causing ocular surface discomfort, visual disturbance, and potential corneal damage.",
+  "Evaporative Dry Eye":
+    "The most prevalent dry eye subtype, driven by meibomian gland dysfunction that accelerates tear evaporation, causing instability, corneal staining, and ocular surface inflammation.",
   Conjunctivitis:
     "Inflammation of the conjunctiva causing redness, discharge, and irritation, triggered by infection, allergy, or chemical exposure.",
+  "Bacterial Conjunctivitis":
+    "Conjunctival inflammation caused by bacterial infection, presenting with purulent discharge, lid crusting, and bilateral spread — typically self-limiting but responsive to topical antibiotics.",
   Keratoconus:
     "A progressive ectatic condition in which the cornea thins and steepens into a cone shape, inducing irregular astigmatism.",
   "Age-related Macular Degeneration":
     "A degenerative disease of the central retina causing progressive loss of central vision, driven by drusen accumulation and RPE atrophy.",
+  "Wet Age-related Macular Degeneration":
+    "The neovascular form of AMD, in which choroidal new vessels breach Bruch's membrane causing rapid central vision loss — treated with intravitreal anti-VEGF injections.",
   "Diabetic Retinopathy":
     "A microvascular complication of diabetes that damages retinal blood vessels, leading to haemorrhage, exudate, and potential neovascularisation.",
+  "Proliferative Diabetic Retinopathy":
+    "The advanced stage of diabetic retinopathy characterised by retinal neovascularisation, which risks vitreous haemorrhage and tractional detachment — requiring urgent laser or anti-VEGF treatment.",
   Amblyopia:
     "Reduced visual acuity in one eye due to abnormal visual development in early childhood, not correctable by optical means alone.",
+  "Anisometropic Amblyopia":
+    "Amblyopia arising from a significant refractive difference between the two eyes, causing chronic defocus in one eye during the critical period of visual development.",
   Strabismus:
     "A condition in which the eyes are misaligned and do not fixate on the same point simultaneously, due to extraocular muscle imbalance.",
+  "Accommodative Esotropia":
+    "A convergent strabismus driven by uncorrected hyperopia, where excessive accommodative effort stimulates disproportionate convergence — managed first with full optical correction.",
   Blepharitis:
     "Chronic inflammation of the eyelid margins, commonly driven by bacterial overgrowth or meibomian gland dysfunction.",
+  "Demodex Blepharitis":
+    "Eyelid margin inflammation caused by Demodex mite infestation, characterised by collarette deposits at lash bases and refractory to standard blepharitis treatments — responds to tea tree oil.",
   "Posterior Vitreous Detachment":
     "A common age-related separation of the vitreous gel from the inner retinal surface, presenting with floaters and flashes.",
   "Retinal Detachment":
     "Separation of the neurosensory retina from the underlying RPE, constituting an ophthalmic emergency requiring prompt surgical intervention.",
+  "Rhegmatogenous Retinal Detachment":
+    "The most common retinal detachment subtype, caused by a full-thickness retinal break that allows vitreous fluid to track beneath the neurosensory retina — associated with high myopia and lattice degeneration.",
   "Anterior Uveitis":
     "Inflammation of the anterior uveal tract (iris and ciliary body), presenting with pain, photophobia, and a hypopyon in severe cases.",
   "Optic Neuritis":
