@@ -44,224 +44,343 @@ type Case = {
 };
 
 const CASES: Case[] = [
+  // ── Neuro-ophthalmology ───────────────────────────────────────────────────
   {
-    diagnosis: "Myopia",
+    diagnosis: "Non-Arteritic Anterior Ischaemic Optic Neuropathy",
     hints: [
-      "A 22-year-old university student reports difficulty reading the board in lecture halls.",
-      "Near vision is completely clear — they can read their phone without any correction.",
-      "Symptoms first appeared around age 10 and have worsened steadily through their teens.",
-      "Retinoscopy reveals a myopic reflex requiring significant minus-power correction.",
-      "Axial length is measured at 25.8 mm on biometry — notably above the normal range.",
-      "Final refraction: –3.50 –0.50 × 180 OU. Single-vision distance spectacles prescribed.",
+      "A 62-year-old man with hypertension and type 2 diabetes wakes to find the lower half of his left visual field has disappeared.",
+      "The vision loss was present on waking — the patient reports no symptoms whatsoever the previous evening.",
+      "There is no pain on eye movement; the eye is quiet and completely white on external examination.",
+      "A relative afferent pupillary defect is present in the left eye; the optic disc appears swollen and hyperaemic with splinter haemorrhages at its inferior margin.",
+      "The contralateral disc has a cup-to-disc ratio of 0.1 — a crowded 'disc at risk' configuration with no physiological cup.",
+      "ESR and CRP are both within normal limits, excluding giant cell arteritis; automated perimetry confirms a dense inferior altitudinal defect.",
     ],
   },
   {
-    diagnosis: "Hyperopia",
+    diagnosis: "Papilloedema",
     hints: [
-      "A 35-year-old presents with frontal headaches and tired eyes after extended reading sessions.",
-      "Distance vision is generally clear; near tasks are consistently more difficult.",
-      "Symptoms improve significantly after resting the eyes for several minutes.",
-      "Cycloplegic refraction reveals a substantial latent component not seen on dry refraction.",
-      "Amplitude of accommodation is reduced relative to the patient's age.",
-      "Final prescription: +2.25 sphere OU. Reading glasses provide immediate symptomatic relief.",
+      "A 28-year-old obese woman presents with a six-week history of daily headaches that are worst on waking and on Valsalva manoeuvre.",
+      "She describes brief episodes of graying-out of vision lasting only seconds, occurring up to four times daily and triggered by standing up quickly.",
+      "Visual acuity is 20/20 in both eyes; automated perimetry reveals enlarged blind spots bilaterally with otherwise intact fields.",
+      "Both optic discs show 360° margin blurring with elevation, absent spontaneous venous pulsations, and flame haemorrhages at the disc margins bilaterally.",
+      "Fundus autofluorescence is negative, effectively excluding optic disc drusen as the cause of bilateral disc elevation.",
+      "Lumbar puncture reveals an opening pressure of 34 cmH₂O with entirely normal CSF constituents; MRI shows an empty sella and bilateral transverse sinus stenosis.",
     ],
   },
   {
-    diagnosis: "Astigmatism",
+    diagnosis: "Internuclear Ophthalmoplegia",
     hints: [
-      "A 28-year-old reports ghosting and a shadow around letters when reading signs at distance.",
-      "The distortion is present at both near and far viewing distances equally.",
-      "Keratometry reveals unequal curvature across the two principal meridians of the cornea.",
-      "Retinoscopy shows a scissor reflex with different neutralization points in each meridian.",
-      "Pinhole testing provides only partial improvement in visual acuity.",
-      "Prescription includes a cylindrical component: –1.75 × 180 OU. Acuity corrects to 20/20.",
+      "A 31-year-old woman presents with a two-day history of horizontal double vision that is worse when looking to the right.",
+      "Cover testing at distance reveals a small left esotropia that is present only in right gaze.",
+      "Attempted right gaze reveals that the left eye adducts sluggishly and incompletely, while the right abducting eye shows coarse horizontal nystagmus.",
+      "Convergence testing is entirely normal — both eyes adduct fully and symmetrically to a near target held at 10 cm.",
+      "She recalls a similar but milder episode of monocular blurred vision 18 months ago that resolved spontaneously over six weeks.",
+      "MRI of the brain reveals a demyelinating plaque within the left medial longitudinal fasciculus; oligoclonal bands are detected in the CSF.",
     ],
   },
   {
-    diagnosis: "Presbyopia",
+    diagnosis: "Horner Syndrome",
     hints: [
-      "A 47-year-old reports they have started holding restaurant menus at arm's length to read them.",
-      "Distance vision remains clear and is unchanged from their exam two years prior.",
-      "The change has been gradual over the past 18 months.",
-      "Push-up amplitude of accommodation testing reveals a near point of 40 cm.",
-      "Over-the-counter reading glasses (+1.50) offer only partial and inconsistent relief.",
-      "Near addition of +1.75 OU prescribed; progressive lenses recommended for full-time wear.",
+      "A 45-year-old woman is referred by her GP after noticing an asymmetry between her upper eyelids in a photograph taken at a recent event.",
+      "Her right pupil measures 2 mm in bright illumination and 2.5 mm in darkness; her left pupil measures 3 mm in bright illumination and 5.5 mm in darkness — the anisocoria is greater in dim light.",
+      "A right upper lid ptosis of 2 mm is noted along with an apparent elevation of the right lower lid (inverse ptosis); there is no conjunctival injection.",
+      "She reports absent sweating on the right side of her face and a persistent dull ache in the right side of her neck over the same two-week period.",
+      "Topical apraclonidine 0.5% instilled bilaterally reverses the anisocoria within 45 minutes, confirming postganglionic sympathetic denervation of the right iris.",
+      "MRI with fat-suppression sequences reveals a right internal carotid artery dissection extending from the C2 level to the skull base.",
     ],
   },
   {
-    diagnosis: "Primary Open-Angle Glaucoma",
+    diagnosis: "Third Nerve Palsy",
     hints: [
-      "A 58-year-old presents for a routine exam and reports no visual symptoms whatsoever.",
-      "IOP measures 26 mmHg OD and 24 mmHg OS on Goldmann applanation tonometry.",
-      "Automated visual field testing reveals a superior arcuate scotoma in the right eye.",
-      "Cup-to-disc ratio is 0.7 bilaterally with inferior neuroretinal rim thinning noted.",
-      "The patient's father lost vision to the same condition in his early sixties.",
-      "OCT of the optic nerve head shows significant RNFL thinning inferotemporal OU.",
+      "A 54-year-old man with well-controlled type 2 diabetes presents with sudden-onset binocular vertical and horizontal diplopia accompanied by severe left periorbital pain he rates 9/10.",
+      "The left upper eyelid is completely ptotic; on manual elevation of the lid, the left eye is deviated downward and outward in primary position.",
+      "The left pupil measures 7 mm and is completely non-reactive to both direct and consensual light stimulation.",
+      "The combination of diabetes and acute onset initially raises the possibility of a microvascular palsy — but pupil involvement and the severity of the headache argue strongly against this aetiology.",
+      "CT of the head is unremarkable; urgent CT angiography is performed the same afternoon.",
+      "A 7 mm left posterior communicating artery aneurysm is identified at its junction with the internal carotid artery; neurosurgery is contacted immediately for clipping.",
     ],
   },
   {
-    diagnosis: "Nuclear Sclerotic Cataract",
+    diagnosis: "Leber's Hereditary Optic Neuropathy",
     hints: [
-      "A 71-year-old reports that their vision has become progressively foggy over the past two years.",
-      "Glare from oncoming headlights while driving at night has become a significant concern.",
-      "Colors appear more yellowed and washed out compared to a few years ago.",
-      "The patient has required three prescription changes in the last four years.",
-      "Monocular diplopia is noted when the right eye is tested in isolation.",
-      "Slit lamp reveals nuclear sclerosis grade 3+ OD and 2+ OS; surgical referral placed.",
+      "A 22-year-old man presents with a two-week history of blurred central vision in his right eye; he explicitly denies any pain on eye movement.",
+      "Best corrected visual acuity is 20/200 OD; colour vision is severely reduced with only 1 of 14 Ishihara plates passed.",
+      "The right optic disc appears hyperaemic with peripapillary telangiectatic microangiopathy; fluorescein angiography shows no disc leakage despite the apparent swelling — pseudooedema.",
+      "Six weeks later, the left eye develops identical symptoms; automated perimetry of both eyes confirms dense centrocaecal scotomas.",
+      "His maternal uncle lost central vision bilaterally in his mid-twenties under near-identical circumstances; his mother and two maternal aunts are entirely asymptomatic.",
+      "Mitochondrial DNA analysis identifies the m.11778G>A point mutation in the ND4 gene, confirming the diagnosis; idebenone is commenced and genetic counselling is provided.",
+    ],
+  },
+  // ── Binocular vision ──────────────────────────────────────────────────────
+  {
+    diagnosis: "Convergence Insufficiency",
+    hints: [
+      "A 19-year-old university student presents with eyestrain, frontal headaches, and intermittent blurred vision that occur exclusively during prolonged reading and screen work.",
+      "Distance vision is entirely clear and comfortable; symptoms are completely absent when watching television, driving, or looking at distant objects.",
+      "Distance cover test is orthophoric; near cover test reveals a 10Δ exophoria with slow, effortful recovery and a subjective sense of strain.",
+      "Near point of convergence is receded to 18 cm (normal <10 cm); base-out fusional vergence amplitudes at near are reduced, with a break at only 12Δ.",
+      "Accommodation is normal for age; cycloplegic refraction reveals only trivial hyperopia (+0.50 DS), effectively excluding a primary accommodative disorder.",
+      "A 12-week programme of office-based vergence and accommodative therapy normalises the NPC to 7 cm and fully resolves all symptoms.",
     ],
   },
   {
-    diagnosis: "Evaporative Dry Eye",
+    diagnosis: "Fourth Nerve Palsy",
     hints: [
-      "A 38-year-old office worker reports burning and stinging eyes that worsen throughout the day.",
-      "Paradoxically, the patient's eyes water excessively despite the persistent burning sensation.",
-      "Symptoms worsen in air-conditioned environments and during prolonged screen use.",
-      "Fluorescein staining reveals punctate epithelial erosions across the inferior cornea.",
-      "Meibomian gland dropout is noted on meibography; expressed secretions are thick and opaque.",
-      "TBUT measured at 4 seconds OU. Artificial tears and warm compresses twice daily initiated.",
+      "A 38-year-old teacher presents with vertical double vision that is most troublesome when descending stairs and when reading — tasks that require downward gaze.",
+      "She has adopted a chin-down and left head-tilt posture that she reports significantly reduces the diplopia.",
+      "Prism cover testing reveals a right hypertropia of 6Δ in primary position that increases in left gaze and increases further on right head tilt — Bielschowsky head tilt test is positive.",
+      "Fundus examination of the right eye reveals excyclotorsion — the optic disc's superior pole is tilted temporally relative to the left eye.",
+      "Old school photographs over a 10-year span confirm the head tilt has been present since childhood, indicating a congenital aetiology that has recently decompensated.",
+      "Vertical fusional amplitudes are dramatically enlarged at 18Δ — a hallmark of long-standing adaptation to a congenital fourth nerve palsy; vertical prism glasses are prescribed.",
     ],
   },
   {
-    diagnosis: "Bacterial Conjunctivitis",
+    diagnosis: "Decompensated Heterophoria",
     hints: [
-      "A 6-year-old is brought in after waking with one eye stuck completely shut.",
-      "Mucopurulent discharge is present with heavy eyelid crusting along the lash margin.",
-      "By day two, conjunctival injection and discharge have spread to involve both eyes.",
-      "A sibling developed identical symptoms two days after the patient's onset.",
-      "The child had a mild cold and runny nose in the preceding week.",
-      "Gram stain of discharge shows gram-positive cocci; empirical topical antibiotic drops prescribed.",
+      "A 35-year-old accountant presents with intermittent horizontal diplopia that has appeared over the past three months, occurring mainly during late afternoon and under deadline pressure.",
+      "She recalls being told she had a 'tendency for her eyes to drift' at a school vision screening two decades ago but had no symptoms until now.",
+      "Distance cover test reveals a 14Δ exophoria with slow, effortful recovery; near cover test shows a similar exophoria with break-and-recovery present.",
+      "Fusional convergence amplitudes are reduced: break at 14Δ base-out at distance; recovery is absent on repeated testing, indicating the deviation is decompensating.",
+      "Near point of convergence is normal at 6 cm; accommodation is full for age; MRI of the brain and orbits is entirely normal, excluding an acquired cranial nerve palsy.",
+      "The condition is attributed to decompensation of a longstanding exophoria under increased sustained visual demand; vergence therapy is initiated with good response.",
     ],
   },
   {
-    diagnosis: "Keratoconus",
+    diagnosis: "Duane Retraction Syndrome",
     hints: [
-      "A 19-year-old reports rapidly worsening vision that is no longer fully correctable with glasses.",
-      "Retinoscopy reveals a prominent scissor reflex that is difficult to neutralize in any meridian.",
-      "Corneal topography shows inferior steepening and markedly irregular astigmatism.",
-      "Slit lamp examination reveals Vogt's striae and a Fleischer ring at the base of the cone.",
-      "Corneal pachymetry at the apex measures 420 μm — well below normal range.",
-      "Rigid gas-permeable lenses prescribed for now; corneal cross-linking referral placed.",
+      "A mother brings her 8-year-old daughter for evaluation after the school nurse observed that the child's right eye 'disappears' when she looks to the right in photographs.",
+      "Despite the obvious ocular motility restriction, the child has never complained of double vision and has no head posture in primary gaze.",
+      "Attempted right gaze reveals severely limited abduction of the right eye that does not cross the midline — the presentation initially raises concern for a right sixth nerve palsy.",
+      "On adduction, the right globe visibly retracts into the orbit and the palpebral fissure narrows significantly; this retraction is not seen in a sixth nerve palsy.",
+      "Electromyography confirms paradoxical co-innervation of the right lateral rectus by branches of the oculomotor nerve; MRI shows an absent right sixth nerve nucleus and fascicle.",
+      "No intervention is planned; the absence of diplopia is explained by the co-innervation pattern preventing conflicting retinal images, and the cosmesis in primary gaze is acceptable.",
+    ],
+  },
+  // ── Retina / vitreous ─────────────────────────────────────────────────────
+  {
+    diagnosis: "Central Retinal Vein Occlusion",
+    hints: [
+      "A 61-year-old man with poorly controlled hypertension presents with sudden painless reduction in vision in his right eye, first noticed on waking.",
+      "Best corrected visual acuity is 6/60 OD; an afferent pupillary defect is equivocal on swinging flashlight testing.",
+      "Fundoscopy reveals flame-shaped and dot-blot haemorrhages in all four retinal quadrants, markedly dilated and tortuous retinal veins, and a swollen optic disc.",
+      "Cotton-wool spots are scattered across the posterior pole; OCT of the macula confirms extensive intraretinal fluid with marked central macular thickening.",
+      "OCT angiography demonstrates loss of perifoveal capillary perfusion; blood pressure at the visit is 178/104 mmHg.",
+      "Intravitreal anti-VEGF therapy is commenced for the macular oedema; urgent cardiovascular workup is initiated given the significantly elevated blood pressure.",
     ],
   },
   {
-    diagnosis: "Wet Age-related Macular Degeneration",
+    diagnosis: "Branch Retinal Artery Occlusion",
     hints: [
-      "A 74-year-old reports a blurry, dark spot that has developed in the centre of their vision.",
-      "The Amsler grid test shows marked distortion — straight lines appear wavy or bent.",
-      "Peripheral vision remains entirely unaffected.",
-      "Fundus examination reveals soft drusen deposits and pigmentary changes throughout the macula.",
-      "The patient is a former smoker whose sibling has received the same diagnosis.",
-      "OCT shows subretinal fluid and RPE disruption; urgent referral to a retinal specialist placed.",
+      "A 67-year-old woman with known atrial fibrillation presents with sudden, painless loss of her inferior-nasal visual field in her left eye over the past two hours.",
+      "Distance visual acuity is 20/20; confrontation visual field testing reveals a dense absolute defect in the inferior-nasal quadrant.",
+      "A bright, refractile, yellowish plaque (Hollenhorst plaque) is visible at the bifurcation of the superior temporal arteriole on fundoscopy.",
+      "A sector of retinal whitening consistent with ischaemic oedema is present in the distribution of the occluded superior temporal branch artery; the fovea appears spared.",
+      "Automated perimetry confirms a dense inferior arcuate scotoma precisely corresponding to the territory of the occluded vessel.",
+      "Transoesophageal echocardiography identifies a left atrial thrombus as the likely embolic source; anticoagulation is commenced immediately.",
     ],
   },
   {
-    diagnosis: "Proliferative Diabetic Retinopathy",
+    diagnosis: "Vitreomacular Traction",
     hints: [
-      "A 54-year-old with a 12-year history of type 2 diabetes presents for their annual eye exam.",
-      "The patient currently reports no visual symptoms.",
-      "Fundus examination reveals dot-blot and flame-shaped haemorrhages in all four quadrants.",
-      "Hard exudates are visible within one disc diameter of the fovea in the right eye.",
-      "HbA1c is reported at 9.2%, indicating poor long-term glycaemic control.",
-      "Neovascularisation of the disc is identified bilaterally; same-day urgent referral to retina specialist.",
+      "A 64-year-old woman presents with a six-month history of progressive metamorphopsia and a mild reduction in central vision in her right eye.",
+      "Amsler grid testing reveals central distortion; best corrected visual acuity has declined from 20/25 to 20/40 over two successive clinic visits six months apart.",
+      "Fundoscopy with a 78D lens appears grossly unremarkable apart from a subtle loss of the normal foveal reflex.",
+      "A few small drusen are noted at the posterior pole; fundus fluorescein angiography demonstrates no leakage and no evidence of an active choroidal neovascular membrane.",
+      "Macular OCT reveals a persistent vitreous attachment at a focal 350 μm zone centred on the fovea, with elevation and tractional distortion of the foveal contour — the posterior hyaloid has not yet separated.",
+      "An intravitreal injection of ocriplasmin achieves pharmacological vitreomacular separation; metamorphopsia resolves and acuity recovers to 20/25 at the three-month review.",
     ],
   },
   {
-    diagnosis: "Anisometropic Amblyopia",
+    diagnosis: "Epiretinal Membrane",
     hints: [
-      "A 7-year-old fails their school vision screening in the left eye only.",
-      "Best corrected visual acuity is 20/20 OD and 20/80 OS with full spectacle correction in place.",
-      "No structural abnormality is found on slit lamp or dilated fundus examination.",
-      "The crowding phenomenon is noted — isolated optotypes are read more easily than a full row.",
-      "Significant anisometropia has been documented since the child's first eye exam at age four.",
-      "Patching of the fellow eye initiated at 2 hours daily; review scheduled in 8 weeks.",
+      "A 71-year-old man reports that straight lines appear wavy when viewed with his right eye alone — noticed when closing his left eye to thread a needle.",
+      "Best corrected distance and near visual acuity are mildly reduced at 20/40 OD; the distortion has been slowly progressive over two years.",
+      "Amsler grid testing confirms central metamorphopsia without any absolute scotoma.",
+      "Fundoscopy reveals a subtle cellophane-like sheen at the macula with mild vascular distortion dragging vessels slightly; the foveal reflex is absent.",
+      "Fundus fluorescein angiography demonstrates no leakage and no evidence of choroidal neovascularisation — the appearance is inconsistent with wet AMD.",
+      "OCT reveals a thin, highly reflective layer adherent to the internal limiting membrane causing tractional distortion of the inner retinal layers with obliteration of the foveal pit.",
     ],
   },
   {
-    diagnosis: "Accommodative Esotropia",
+    diagnosis: "Choroidal Melanoma",
     hints: [
-      "Parents report their 4-year-old's left eye turns inward, particularly when the child is tired.",
-      "The child never complains of seeing double.",
-      "Cover test reveals a constant esotropia of 20 prism diopters at both near and distance.",
-      "Cycloplegic refraction reveals bilateral hyperopia of +3.50 DS.",
-      "Stereopsis is reduced to 400 seconds of arc on Randot stereoacuity testing.",
-      "Full optical correction prescribed first; referral to paediatric ophthalmology for surgical evaluation.",
+      "A 58-year-old man is referred after a pigmented fundus lesion is identified incidentally during a routine dilated fundus examination; he is completely asymptomatic.",
+      "The lesion is located temporal to the fovea in the right eye — dome-shaped, slate-grey with orange surface pigmentation (lipofuscin deposits), measuring 11 mm in basal diameter.",
+      "A dilated episcleral sentinel vessel is identified on careful slit lamp examination of the right globe.",
+      "B-scan ultrasonography reveals a dome-shaped lesion with choroidal excavation, low internal reflectivity (acoustic hollowness), and a height of 3.2 mm.",
+      "Automated visual field testing demonstrates a corresponding scotoma; MRI of the orbits confirms no extraocular extension.",
+      "Liver function tests, CT of the chest and abdomen, and liver ultrasound are performed to stage the disease; the patient is referred to a specialist ocular oncology centre for plaque brachytherapy.",
+    ],
+  },
+  // ── Anterior segment / cornea ─────────────────────────────────────────────
+  {
+    diagnosis: "Acanthamoeba Keratitis",
+    hints: [
+      "A 26-year-old soft contact lens wearer presents with severe right eye pain she describes as disproportionately intense relative to the modest degree of redness visible.",
+      "She admits to routinely rinsing her lenses with tap water and wearing them while swimming in a lake over the preceding summer months.",
+      "A course of broad-spectrum topical fluoroquinolone antibiotics prescribed by her GP over two weeks has produced no clinical improvement whatsoever.",
+      "Slit lamp examination reveals anterior stromal infiltrates arranged in a partial ring pattern and faint opacities tracking along the course of corneal nerves — perineural infiltrates.",
+      "Confocal microscopy of the corneal stroma demonstrates double-walled cysts with morphology characteristic of Acanthamoeba species.",
+      "Intensive topical polyhexamethylene biguanide (PHMB) 0.02% and propamidine isethionate (Brolene) are commenced; the patient is informed treatment will continue for a minimum of six months.",
     ],
   },
   {
-    diagnosis: "Demodex Blepharitis",
+    diagnosis: "Herpes Simplex Keratitis",
     hints: [
-      "A 45-year-old presents with crusty, itchy eyelids that are worst every morning on waking.",
-      "Collarettes — cylindrical, sleeve-like deposits — are visible at the base of multiple lashes.",
-      "Symptoms have persisted for several months and did not respond to antihistamines.",
-      "Meibomian gland expression yields thick, toothpaste-like secretions rather than clear oil.",
-      "Epilated lashes examined microscopically reveal Demodex mites at the root.",
-      "Lid hygiene routine, warm compresses, and tea tree oil lid wipes prescribed; omega-3 supplementation advised.",
+      "A 34-year-old man presents with a three-day history of right eye redness, photophobia, and a foreign body sensation — he initially attributed it to a contact lens problem but has not worn lenses for over a year.",
+      "He reports two clinically similar episodes affecting the same eye over the past four years, each resolving over several weeks without a definitive diagnosis.",
+      "Slit lamp examination with fluorescein staining under cobalt-blue illumination reveals a linear branching epithelial defect with terminal end-bulbs — a classic dendritic figure.",
+      "Corneal sensation assessed with a fine cotton thread is markedly reduced in the affected eye compared with the fellow eye and with expected norms.",
+      "The stroma is clear in this episode; there is mild anterior chamber activity with 1+ cells and trace flare.",
+      "Topical aciclovir 3% ointment five times daily is prescribed; prophylactic oral antiviral therapy is discussed given the pattern of recurrence.",
     ],
   },
   {
-    diagnosis: "Posterior Vitreous Detachment",
+    diagnosis: "Fuchs' Endothelial Dystrophy",
     hints: [
-      'A 62-year-old reports a sudden onset of new floaters they describe as "a cobweb in my vision."',
-      "A large, ring-shaped floater (Weiss ring) is visible on dilated fundus examination.",
-      "The patient also notices flashing lights in the temporal field of the affected eye.",
-      "Careful peripheral retinal examination with scleral depression reveals no breaks or tears.",
-      "The onset was acute — the patient first noticed it while reading the morning of presentation.",
-      "OCT confirms separation of the posterior vitreous face from the optic nerve head.",
+      "A 57-year-old woman presents with bilateral slowly progressive blurred vision that is consistently worse in the morning and characteristically improves within two to three hours of waking.",
+      "She initially attributed the morning blur to 'sleep in her eyes' but the symptom has become significantly more pronounced and predictable over the past 18 months.",
+      "Distance acuity is 20/40 OD and 20/50 OS in the morning clinic slot, improving to 20/25 and 20/30 respectively when retested in the afternoon; pinhole produces no improvement.",
+      "Slit lamp examination under specular illumination reveals a beaten-bronze appearance of the corneal endothelium with confluent central guttae and mild diffuse stromal thickening.",
+      "Specular microscopy confirms markedly reduced endothelial cell density at 680 cells/mm² OD with grossly pleomorphic and polymegethous cells; central corneal pachymetry measures 620 μm OD.",
+      "Descemet membrane endothelial keratoplasty (DMEK) is planned; the patient is counselled that cataract extraction carries significant risk of precipitating corneal decompensation.",
     ],
   },
   {
-    diagnosis: "Rhegmatogenous Retinal Detachment",
+    diagnosis: "Acute Angle-Closure Glaucoma",
     hints: [
-      'A 55-year-old reports a "dark curtain" rising from the bottom of their visual field since this morning.',
-      "This was preceded by three days of suddenly increased floaters and photopsia.",
-      "Visual acuity in the affected eye has dropped to 20/200.",
-      "The patient is a high myope (–8.00 D) with a known history of peripheral lattice degeneration.",
-      "Fundus examination confirms a macula-on bullous detachment with a superior horseshoe tear.",
-      "Same-day emergency referral to vitreoretinal surgery; B-scan ultrasound confirms elevated retina.",
+      "A 64-year-old hyperopic woman presents to the emergency department with sudden-onset severe left ocular pain, nausea, and vomiting that began two hours ago in a darkened cinema.",
+      "She reports noticing coloured haloes around lights on several occasions over the preceding weeks, which she dismissed as a problem with her reading glasses prescription.",
+      "The left eye shows circumcorneal ciliary flush; the cornea appears hazy and microcystic; the pupil is mid-dilated, vertically oval, and non-reactive to direct light.",
+      "The left globe is rock-hard on gentle digital palpation; Van Herick slit lamp assessment of the fellow eye reveals a narrow anterior chamber angle of grade 1.",
+      "IOP by Goldmann applanation tonometry measures 58 mmHg OS; gonioscopy confirms complete iridocorneal angle closure with peripheral anterior synechiae beginning to form.",
+      "Intravenous acetazolamide, topical IOP-lowering agents, and pilocarpine are administered; emergency Nd:YAG laser peripheral iridotomy is performed in both eyes once corneal clarity is restored.",
+    ],
+  },
+  // ── Glaucoma ──────────────────────────────────────────────────────────────
+  {
+    diagnosis: "Normal Tension Glaucoma",
+    hints: [
+      "A 52-year-old woman is referred after her optometrist detected an abnormal automated visual field in her right eye during a routine examination; she reports no ocular symptoms.",
+      "Goldmann applanation IOP has measured between 12 and 16 mmHg at every clinic visit over two years; central corneal thickness is 545 μm bilaterally — average, offering no correction factor.",
+      "Automated perimetry reveals a dense superior paracentral scotoma in the right eye extending to within 5° of fixation — a pattern more consistent with vascular than pressure-related optic nerve injury.",
+      "The right optic disc shows a focal inferior notch with a disc haemorrhage at the 7 o'clock position; OCT RNFL confirms significant inferior thinning in both eyes with the right worse than the left.",
+      "MRI of the brain and orbits with contrast is entirely normal, excluding a compressive lesion or demyelinating process as the underlying cause of the optic neuropathy.",
+      "Ambulatory blood pressure monitoring reveals nocturnal hypotension with a dipping pattern exceeding 20%; topical prostaglandin analogue is commenced with a target IOP reduction of 30%.",
     ],
   },
   {
-    diagnosis: "Anterior Uveitis",
+    diagnosis: "Pigmentary Glaucoma",
     hints: [
-      "A 32-year-old presents with a painful, red eye and pronounced photophobia over 48 hours.",
-      "Visual acuity is mildly reduced to 20/40 in the affected eye.",
-      "Slit lamp examination shows 3+ cells and significant flare in the anterior chamber.",
-      "Keratic precipitates are visible on the inferior corneal endothelium.",
-      "The patient carries a confirmed diagnosis of ankylosing spondylitis.",
-      "Posterior synechiae are beginning to form; cycloplegic drops and topical corticosteroids initiated.",
+      "A 29-year-old myopic man presents after an acute episode of blurred vision and coloured haloes lasting 90 minutes that occurred during and immediately after a vigorous gym session.",
+      "IOP measured three hours after the episode is 24 mmHg OD and 22 mmHg OS; a routine check six months prior recorded 18 mmHg bilaterally.",
+      "Slit lamp examination reveals a vertical spindle-shaped brown pigment deposit on the central corneal endothelium (Krukenberg spindle) and markedly dense trabecular pigmentation on gonioscopy.",
+      "Iris transillumination defects are present in a radial spoke-like pattern in the mid-peripheral iris bilaterally; UBM demonstrates a concave posterior iris bowing consistent with reverse pupillary block.",
+      "Automated perimetry is currently full; however, OCT RNFL reveals borderline inferior thinning bilaterally consistent with early glaucomatous damage.",
+      "Topical IOP-lowering therapy is commenced; the patient is counselled to avoid pupil-dilating activities and is warned the condition characteristically attenuates spontaneously after the fifth decade.",
     ],
   },
   {
-    diagnosis: "Optic Neuritis",
+    diagnosis: "Pseudoexfoliation Glaucoma",
     hints: [
-      "A 28-year-old woman presents with progressive, painful vision loss in one eye over three days.",
-      "Pain is markedly worse with eye movement in any direction.",
-      "Red colour vision is significantly reduced — she describes the red of a stop sign as washed out.",
-      "A relative afferent pupillary defect (RAPD) is present in the right eye.",
-      "The optic disc appears entirely normal — the lesion is retrobulbar.",
-      "MRI reveals a periventricular white matter lesion; neurology referral placed urgently.",
+      "A 74-year-old man is referred for cataract assessment; his right eye IOP is 32 mmHg and left eye IOP is 18 mmHg on two separate measurements.",
+      "Despite maximal mydriatic drops, pupillary dilation is poor bilaterally; the zonules are visible and appear lax, with subtle phacodonesis evident on slit lamp examination.",
+      "A white, flaky, dandruff-like material is visible at the pupillary ruff and as a central disc with a clear intermediate zone on the anterior lens capsule — most prominent just within the pupil margin.",
+      "Gonioscopy of the right eye reveals uneven, dense pigmentation of the trabecular meshwork with a Sampaolesi line — a pigment line anterior to Schwalbe's line.",
+      "Automated perimetry of the right eye reveals an early superior arcuate scotoma; OCT RNFL confirms asymmetric inferior thinning in keeping with right eye glaucoma.",
+      "Cataract surgery is planned with use of a capsular tension ring given the zonular fragility; trabeculectomy is discussed given the asymmetric magnitude of IOP.",
+    ],
+  },
+  // ── Systemic with ocular manifestation ───────────────────────────────────
+  {
+    diagnosis: "Giant Cell Arteritis",
+    hints: [
+      "A 74-year-old woman presents with a one-week history of sudden painless visual loss in her right eye reducing acuity to hand movements; she also reports a four-week history of temporal headache, scalp tenderness on brushing, and jaw pain when chewing.",
+      "The right optic disc is chalk-white and swollen — a pale disc oedema rather than the hyperaemic swelling typical of non-arteritic disease; a brisk RAPD is present.",
+      "The left eye is currently unaffected, but the patient reports a brief episode of transient monocular visual loss (amaurosis fugax) in the left eye yesterday lasting approximately two minutes.",
+      "ESR is 112 mm/hr; CRP is 98 mg/L; platelets are elevated at 520 × 10⁹/L — the full inflammatory triad.",
+      "High-dose intravenous methylprednisolone is started immediately without awaiting biopsy to protect the remaining eye; temporal artery biopsy is arranged within 48 hours.",
+      "Biopsy reveals transmural granulomatous inflammation with multinucleated giant cells and disruption of the internal elastic lamina, confirming the diagnosis histologically.",
     ],
   },
   {
-    diagnosis: "Central Serous Retinopathy",
+    diagnosis: "Thyroid Eye Disease",
     hints: [
-      "A 36-year-old man reports a blurry, washed-out spot in the centre of his vision for two weeks.",
-      "Objects in the affected eye appear smaller and more distant than in the fellow eye (micropsia).",
-      "The patient recently completed an intense, high-pressure work deadline.",
-      "OCT imaging reveals a dome of subretinal fluid elevating the neurosensory retina beneath the macula.",
-      'Fundus fluorescein angiography demonstrates a classic "smokestack" pattern of leakage.',
-      "A Type A personality and corticosteroid use are noted; spontaneous resolution expected within 3 months.",
+      "A 43-year-old woman presents with a four-month history of bilateral eye redness, grittiness, and a sensation that her eyes are 'staring' — multiple friends have independently commented on a change in her facial appearance.",
+      "She has a two-year history of Graves' disease, currently euthyroid on carbimazole; she is a current smoker of 15 cigarettes per day.",
+      "Exophthalmometry reveals 24 mm of proptosis bilaterally (normal <20 mm); there is bilateral upper lid retraction with scleral show above the corneal limbus in primary gaze.",
+      "Motility testing reveals restriction of elevation in both eyes; she reports vertical diplopia on upgaze that has progressively worsened over two months.",
+      "Colour vision and contrast sensitivity are currently normal; however, pattern VEPs show borderline prolonged latency in the right eye, prompting urgent cross-sectional orbital imaging.",
+      "CT/MRI of the orbits demonstrates fusiform enlargement of bilateral inferior and medial recti with tendon-sparing — the characteristic pattern of thyroid orbitopathy; intravenous methylprednisolone pulse therapy is commenced.",
     ],
   },
   {
-    diagnosis: "Corneal Abrasion",
+    diagnosis: "Myasthenia Gravis",
     hints: [
-      "A 24-year-old contact lens wearer presents with acute, severe eye pain and photophobia.",
-      "The patient reports something caught under their contact lens during removal the previous night.",
-      "Visual acuity is reduced to 20/60 in the affected eye.",
-      "Fluorescein staining under cobalt blue illumination reveals a 3 mm epithelial defect on the central cornea.",
-      "Eversion of the upper lid reveals no residual foreign body.",
-      "Bandage soft contact lens applied; prophylactic topical antibiotic and lubricating drops prescribed.",
+      "A 47-year-old woman presents with a three-month history of intermittent drooping of the right upper eyelid that is absent in the morning but consistently pronounced by the evening.",
+      "She also reports intermittent horizontal double vision that fluctuates from hour to hour and is entirely absent on some days — a pattern of variability that no fixed motility deficit can explain.",
+      "Sustained upgaze for 60 seconds produces progressive worsening of the ptosis; on rapid return to primary position, the left lid momentarily overshoots upward before settling — Cogan's lid twitch sign.",
+      "Application of an ice pack to the right upper lid for two minutes produces a measurable 3 mm improvement in ptosis — a positive ice pack test exploiting impaired acetylcholinesterase activity at reduced temperatures.",
+      "Serum anti-acetylcholine receptor antibodies return as strongly positive; CT of the mediastinum is performed.",
+      "CT reveals an anterior mediastinal mass consistent with thymoma; the patient is referred for thymectomy; pyridostigmine and prednisolone are commenced.",
+    ],
+  },
+  // ── Uvea ──────────────────────────────────────────────────────────────────
+  {
+    diagnosis: "Vogt-Koyanagi-Harada Syndrome",
+    hints: [
+      "A 33-year-old Japanese woman presents with bilateral blurred vision and photophobia of three days duration; one week prior she experienced severe headaches, neck stiffness, tinnitus, and vertigo which she attributed to a viral illness.",
+      "Both eyes show diffuse anterior uveitis with 3+ cells and flare; fundoscopy reveals bilateral disc hyperaemia and multiple serous neurosensory retinal detachments in the posterior pole.",
+      "Lumbar puncture performed during the prodromal phase showed CSF pleocytosis (40 lymphocytes/mm³) with normal protein and glucose — consistent with aseptic meningitis.",
+      "OCT confirms bilateral exudative subretinal fluid; FFA shows multiple hyperfluorescent pinpoints at the RPE level with late pooling into a 'milky way' pattern characteristic of multifocal RPE leakage.",
+      "Three months after the initial uveitic episode, the patient develops patches of skin depigmentation on her forearms (vitiligo) and whitening of her eyelashes (poliosis).",
+      "High-dose systemic corticosteroids are commenced with a slow taper over 6–12 months; HLA-DR4 typing is positive, consistent with known genetic susceptibility in this condition.",
+    ],
+  },
+  {
+    diagnosis: "Sympathetic Ophthalmia",
+    hints: [
+      "A 39-year-old man presents with bilateral visual disturbance, photophobia, and a dull aching pain in his left eye — an eye he states has 'never been right' since a metalworking injury nine months ago.",
+      "The right eye (which sustained no injury) shows 2+ anterior chamber cells, flare, and large mutton-fat keratic precipitates; fundoscopy reveals vitritis and creamy-white chorioretinal nodules.",
+      "Careful history elicits that the left eye (the injured eye) sustained a penetrating full-thickness corneal laceration that was repaired surgically; it has had chronic low-grade inflammation since.",
+      "The combination of bilateral granulomatous uveitis with discrete yellow-white chorioretinal nodules (Dalen-Fuchs nodules) occurring after penetrating trauma is a pattern highly specific to this condition.",
+      "Sarcoidosis, Vogt-Koyanagi-Harada syndrome, and infectious uveitis are excluded on comprehensive systemic workup; the temporal relationship to the perforating injury and bilateral granulomatous inflammation are diagnostic.",
+      "High-dose oral corticosteroids and steroid-sparing immunosuppression are commenced; enucleation of the exciting (injured) eye is discussed but deferred as it retains measurable vision.",
+    ],
+  },
+  // ── Lids / adnexa ─────────────────────────────────────────────────────────
+  {
+    diagnosis: "Sebaceous Cell Carcinoma",
+    hints: [
+      "A 69-year-old woman presents with her third recurrence of a chalazion in the same location on the right upper lid over 18 months, each previously treated with incision and curettage.",
+      "The tissue surrounding the recurrent lesion shows subtle diffuse thickening of the lid margin with loss of normal eyelash architecture (madarosis) over a 10 mm segment.",
+      "The superior tarsal conjunctiva of the right upper lid shows a diffuse, velvety, yellowish thickening on eversion — not replicated on the lower lid or in the left eye.",
+      "The lesion does not respond to repeat curettage or intralesional steroid injection; its behaviour is inconsistent with that of a benign chalazion.",
+      "Incisional biopsy with map biopsies of the conjunctival surface reveals pagetoid spread of malignant cells with foamy lipid-laden cytoplasm infiltrating the conjunctival epithelium.",
+      "Wide surgical excision with frozen section margin control is performed; sentinel lymph node biopsy is discussed given the established risk of regional metastasis to preauricular and submandibular nodes.",
+    ],
+  },
+  {
+    diagnosis: "Floppy Eyelid Syndrome",
+    hints: [
+      "A 48-year-old obese man presents with chronic unilateral papillary conjunctivitis of the right eye that is worst on waking and has failed to respond to antihistamines, mast cell stabilisers, and three courses of topical antibiotics over two years.",
+      "He reports that his right eye is consistently most irritated immediately on waking and improves gradually through the day; he sleeps predominantly on his right side.",
+      "The right upper lid is markedly lax — it everts spontaneously with minimal upward traction; the tarsal plate feels rubbery and lacks its normal rigid consistency.",
+      "The superior tarsal conjunctiva shows a velvety papillary reaction with mucoid discharge; punctate epithelial erosions are present on the superior cornea.",
+      "His partner reports loud snoring and witnessed apnoeic episodes; referral to a sleep physician confirms obstructive sleep apnoea with an apnoea-hypopnoea index of 38 events per hour.",
+      "Lid-taping during sleep and CPAP therapy produce dramatic improvement in morning symptoms; horizontal lid-tightening surgery is planned for definitive management.",
+    ],
+  },
+  // ── Posterior scleritis ───────────────────────────────────────────────────
+  {
+    diagnosis: "Posterior Scleritis",
+    hints: [
+      "A 41-year-old woman with known rheumatoid arthritis presents with severe, deep, boring right eye pain that wakes her from sleep and is not relieved by standard oral analgesics.",
+      "The anterior segment is entirely quiet with no injection, cells, or flare; IOP is normal; a diagnosis of anterior scleritis is clinically excluded.",
+      "Fundoscopy reveals choroidal folds radiating from the posterior pole and a shallow exudative retinal detachment with no visible retinal break.",
+      "B-scan ultrasonography demonstrates thickening of the posterior coats of the globe and fluid in Tenon's space posterior to the globe, producing the pathognomonic T-sign.",
+      "MRI of the orbits confirms scleral wall thickening at the posterior pole and excludes an orbital mass lesion, metastatic choroidal disease, and uveal effusion syndrome.",
+      "Oral NSAIDs and systemic corticosteroids are commenced; immunosuppression is escalated in coordination with the patient's rheumatologist given the context of her rheumatoid arthritis.",
     ],
   },
 ];
@@ -312,7 +431,6 @@ const ALL_DIAGNOSES = [
   "Corneal Graft Rejection",
   "Chemical Burn",
   // Conjunctiva & sclera
-  "Conjunctivitis",
   "Bacterial Conjunctivitis",
   "Viral Conjunctivitis",
   "Allergic Conjunctivitis",
@@ -326,10 +444,10 @@ const ALL_DIAGNOSES = [
   "Mucous Membrane Pemphigoid",
   "Stevens-Johnson Syndrome",
   "Episcleritis",
-  "Scleritis",
+  "Anterior Scleritis",
+  "Posterior Scleritis",
   "Necrotising Scleritis",
   // Lids & adnexa
-  "Blepharitis",
   "Seborrhoeic Blepharitis",
   "Demodex Blepharitis",
   "Anterior Blepharitis",
@@ -355,7 +473,6 @@ const ALL_DIAGNOSES = [
   "Sebaceous Cell Carcinoma",
   "Ocular Rosacea",
   // Dry eye
-  "Dry Eye Syndrome",
   "Evaporative Dry Eye",
   "Aqueous Deficient Dry Eye",
   "Sjögren's Syndrome",
@@ -368,6 +485,7 @@ const ALL_DIAGNOSES = [
   "Posterior Uveitis",
   "Panuveitis",
   "Fuchs' Uveitis Syndrome",
+  "Vogt-Koyanagi-Harada Syndrome",
   "Sympathetic Ophthalmia",
   "Hyphema",
   "Hypopyon",
@@ -378,7 +496,6 @@ const ALL_DIAGNOSES = [
   "Primary Open-Angle Glaucoma",
   "Normal Tension Glaucoma",
   "Ocular Hypertension",
-  "Angle-Closure Glaucoma",
   "Acute Angle-Closure Glaucoma",
   "Chronic Angle-Closure Glaucoma",
   "Pigmentary Glaucoma",
@@ -388,9 +505,7 @@ const ALL_DIAGNOSES = [
   "Steroid-Induced Glaucoma",
   "Juvenile Open-Angle Glaucoma",
   "Congenital Glaucoma",
-  "Glaucoma",
   // Lens
-  "Cataracts",
   "Nuclear Sclerotic Cataract",
   "Cortical Cataract",
   "Posterior Subcapsular Cataract",
@@ -402,7 +517,6 @@ const ALL_DIAGNOSES = [
   "Posterior Vitreous Detachment",
   "Vitreous Haemorrhage",
   "Asteroid Hyalosis",
-  "Retinal Detachment",
   "Rhegmatogenous Retinal Detachment",
   "Tractional Retinal Detachment",
   "Exudative Retinal Detachment",
@@ -412,11 +526,9 @@ const ALL_DIAGNOSES = [
   "Macular Hole",
   "Epiretinal Membrane",
   "Vitreomacular Traction",
-  "Diabetic Retinopathy",
   "Non-Proliferative Diabetic Retinopathy",
   "Proliferative Diabetic Retinopathy",
   "Diabetic Macular Oedema",
-  "Age-related Macular Degeneration",
   "Dry Age-related Macular Degeneration",
   "Wet Age-related Macular Degeneration",
   "Central Serous Retinopathy",
@@ -459,8 +571,6 @@ const ALL_DIAGNOSES = [
   "Familial Exudative Vitreoretinopathy",
   // Optic nerve & neuro-ophthalmic
   "Optic Neuritis",
-  "Ischaemic Optic Neuropathy",
-  "Anterior Ischaemic Optic Neuropathy",
   "Non-Arteritic Anterior Ischaemic Optic Neuropathy",
   "Arteritic Anterior Ischaemic Optic Neuropathy",
   "Toxic Optic Neuropathy",
@@ -483,17 +593,18 @@ const ALL_DIAGNOSES = [
   "Nystagmus",
   "Congenital Nystagmus",
   // Strabismus & binocularity
-  "Strabismus",
   "Esotropia",
   "Accommodative Esotropia",
   "Intermittent Exotropia",
   "Exotropia",
   "Hypertropia",
-  "Amblyopia",
   "Anisometropic Amblyopia",
+  "Deprivation Amblyopia",
+  "Strabismic Amblyopia",
   "Convergence Insufficiency",
   "Convergence Excess",
   "Divergence Insufficiency",
+  "Decompensated Heterophoria",
   "Duane Retraction Syndrome",
   "Brown Syndrome",
   "Superior Oblique Myokymia",
@@ -502,7 +613,6 @@ const ALL_DIAGNOSES = [
   "Giant Cell Arteritis",
   "Sarcoidosis",
   "Behçet's Disease",
-  "Vogt-Koyanagi-Harada Syndrome",
   "Systemic Lupus Erythematosus",
   "Rheumatoid Arthritis",
   "Multiple Sclerosis",
@@ -539,7 +649,6 @@ const ALL_DIAGNOSES = [
   "Senior-Løken Syndrome",
   "Cohen Syndrome",
   // Trauma & contact lens
-  "Corneal Abrasion",
   "Globe Rupture",
   "Orbital Blowout Fracture",
   "Hyphema",
@@ -549,24 +658,18 @@ const ALL_DIAGNOSES = [
   "Contact Lens Papillary Conjunctivitis",
 ].sort();
 
-const EPOCH_DAY = Math.floor(new Date("2026-01-01").getTime() / 86400000);
+const EPOCH_DAY = Math.floor(new Date("2026-06-01").getTime() / 86400000);
 
 function getTodayDay(): number {
   return Math.floor(Date.now() / 86400000) - EPOCH_DAY;
 }
 
-// ── Persistence ───────────────────────────────────────────────────────────────
-
-const LS_KEY = "optomdle-v1";
-
-type Saved = { day: number; guesses: string[] };
+// ── Persistence (per-day) ──────────────────────────────────────────────────
 
 function loadSaved(day: number): string[] {
   try {
-    const raw = localStorage.getItem(LS_KEY);
-    if (!raw) return [];
-    const s: Saved = JSON.parse(raw);
-    return s.day === day ? s.guesses : [];
+    const raw = localStorage.getItem(`optomdle-v2-${day}`);
+    return raw ? JSON.parse(raw) : [];
   } catch {
     return [];
   }
@@ -574,7 +677,7 @@ function loadSaved(day: number): string[] {
 
 function persist(day: number, guesses: string[]) {
   try {
-    localStorage.setItem(LS_KEY, JSON.stringify({ day, guesses }));
+    localStorage.setItem(`optomdle-v2-${day}`, JSON.stringify(guesses));
   } catch {}
 }
 
@@ -633,86 +736,77 @@ function recordGame(dayNumber: number, won: boolean): UserStats {
 // ── Diagnosis definitions ─────────────────────────────────────────────────────
 
 const DIAGNOSIS_DEFS: Record<string, string> = {
-  Myopia:
-    "A refractive error in which close objects are seen clearly but distant objects appear blurred, caused by an elongated eyeball or steep corneal curvature.",
-  Hyperopia:
-    "A refractive error in which the focal point falls behind the retina, causing near objects to appear blurred and producing eye strain.",
-  Astigmatism:
-    "An imperfection in the curvature of the cornea or lens that causes blurred or distorted vision at all distances.",
-  Presbyopia:
-    "Age-related loss of the crystalline lens's ability to change shape for near focus, typically beginning in the mid-40s.",
-  Glaucoma:
-    "A group of optic neuropathies characterised by progressive retinal ganglion cell loss, often associated with elevated intraocular pressure.",
-  "Primary Open-Angle Glaucoma":
-    "The most common form of glaucoma, characterised by open iridocorneal angles, elevated IOP, progressive RNFL thinning, and arcuate visual field loss — often asymptomatic until advanced.",
-  Cataracts:
-    "Clouding of the crystalline lens that leads to progressive, painless reduction in visual clarity, most commonly due to ageing.",
-  "Nuclear Sclerotic Cataract":
-    "Age-related hardening and yellowing of the lens nucleus causing progressive blur, glare, myopic shift, and colour desaturation — the most common cataract type in adults.",
-  "Dry Eye Syndrome":
-    "A multifactorial disease of the tear film causing ocular surface discomfort, visual disturbance, and potential corneal damage.",
-  "Evaporative Dry Eye":
-    "The most prevalent dry eye subtype, driven by meibomian gland dysfunction that accelerates tear evaporation, causing instability, corneal staining, and ocular surface inflammation.",
-  Conjunctivitis:
-    "Inflammation of the conjunctiva causing redness, discharge, and irritation, triggered by infection, allergy, or chemical exposure.",
-  "Bacterial Conjunctivitis":
-    "Conjunctival inflammation caused by bacterial infection, presenting with purulent discharge, lid crusting, and bilateral spread — typically self-limiting but responsive to topical antibiotics.",
-  Keratoconus:
-    "A progressive ectatic condition in which the cornea thins and steepens into a cone shape, inducing irregular astigmatism.",
-  "Age-related Macular Degeneration":
-    "A degenerative disease of the central retina causing progressive loss of central vision, driven by drusen accumulation and RPE atrophy.",
-  "Wet Age-related Macular Degeneration":
-    "The neovascular form of AMD, in which choroidal new vessels breach Bruch's membrane causing rapid central vision loss — treated with intravitreal anti-VEGF injections.",
-  "Diabetic Retinopathy":
-    "A microvascular complication of diabetes that damages retinal blood vessels, leading to haemorrhage, exudate, and potential neovascularisation.",
-  "Proliferative Diabetic Retinopathy":
-    "The advanced stage of diabetic retinopathy characterised by retinal neovascularisation, which risks vitreous haemorrhage and tractional detachment — requiring urgent laser or anti-VEGF treatment.",
-  Amblyopia:
-    "Reduced visual acuity in one eye due to abnormal visual development in early childhood, not correctable by optical means alone.",
-  "Anisometropic Amblyopia":
-    "Amblyopia arising from a significant refractive difference between the two eyes, causing chronic defocus in one eye during the critical period of visual development.",
-  Strabismus:
-    "A condition in which the eyes are misaligned and do not fixate on the same point simultaneously, due to extraocular muscle imbalance.",
-  "Accommodative Esotropia":
-    "A convergent strabismus driven by uncorrected hyperopia, where excessive accommodative effort stimulates disproportionate convergence — managed first with full optical correction.",
-  Blepharitis:
-    "Chronic inflammation of the eyelid margins, commonly driven by bacterial overgrowth or meibomian gland dysfunction.",
-  "Demodex Blepharitis":
-    "Eyelid margin inflammation caused by Demodex mite infestation, characterised by collarette deposits at lash bases and refractory to standard blepharitis treatments — responds to tea tree oil.",
-  "Posterior Vitreous Detachment":
-    "A common age-related separation of the vitreous gel from the inner retinal surface, presenting with floaters and flashes.",
-  "Retinal Detachment":
-    "Separation of the neurosensory retina from the underlying RPE, constituting an ophthalmic emergency requiring prompt surgical intervention.",
-  "Rhegmatogenous Retinal Detachment":
-    "The most common retinal detachment subtype, caused by a full-thickness retinal break that allows vitreous fluid to track beneath the neurosensory retina — associated with high myopia and lattice degeneration.",
-  "Anterior Uveitis":
-    "Inflammation of the anterior uveal tract (iris and ciliary body), presenting with pain, photophobia, and a hypopyon in severe cases.",
+  "Non-Arteritic Anterior Ischaemic Optic Neuropathy":
+    "Infarction of the anterior optic nerve due to small vessel ischaemia, presenting as sudden painless altitudinal visual field loss on waking — typically in patients with a crowded 'disc at risk' and vascular risk factors.",
+  "Papilloedema":
+    "Bilateral optic disc swelling caused by raised intracranial pressure, distinguished by preserved visual acuity early in its course, absent spontaneous venous pulsations, and transient obscurations on postural change.",
+  "Internuclear Ophthalmoplegia":
+    "A horizontal gaze disorder caused by a lesion of the medial longitudinal fasciculus, producing ipsilateral adduction deficit with contralateral abducting nystagmus while convergence remains intact.",
+  "Horner Syndrome":
+    "Ipsilateral ptosis, miosis, and anhidrosis caused by interruption of the three-neuron oculosympathetic pathway, with anisocoria greatest in dim illumination — pharmacological testing localises the lesion level.",
+  "Third Nerve Palsy":
+    "Palsy of the oculomotor nerve producing ptosis, a down-and-out eye deviation, and — in compressive aetiologies — a fixed dilated pupil requiring urgent vascular imaging to exclude a posterior communicating artery aneurysm.",
+  "Leber's Hereditary Optic Neuropathy":
+    "A mitochondrial disorder causing bilateral sequential painless central visual loss in young men, characterised by peripapillary telangiectatic microangiopathy and centrocaecal scotomas without disc leakage on FFA.",
+  "Convergence Insufficiency":
+    "A binocular vision disorder characterised by a receded near point of convergence and near exophoria with reduced fusional reserves, causing asthenopia and diplopia exclusively at near — first-line treatment is vergence therapy.",
+  "Fourth Nerve Palsy":
+    "Palsy of the trochlear nerve causing ipsilateral superior oblique weakness, manifest as vertical and torsional diplopia maximal in contralateral gaze and on ipsilateral head tilt — confirmed by the Parks-Bielschowsky three-step test.",
+  "Decompensated Heterophoria":
+    "Breakdown of a pre-existing latent deviation (phoria) previously maintained by adequate fusional vergence reserves, presenting with intermittent diplopia and asthenopia that worsens under sustained visual demand or fatigue.",
+  "Duane Retraction Syndrome":
+    "A congenital cranial dysinnervation disorder caused by absent sixth nerve nucleus, resulting in limited abduction with globe retraction and fissure narrowing on adduction due to anomalous oculomotor co-innervation of the lateral rectus.",
+  "Central Retinal Vein Occlusion":
+    "Occlusion of the central retinal vein at the lamina cribrosa causing sudden vision loss with four-quadrant haemorrhages, dilated tortuous veins, disc swelling, and macular oedema — managed with intravitreal anti-VEGF.",
+  "Branch Retinal Artery Occlusion":
+    "Occlusion of a tributary retinal artery, typically by an embolus, causing acute sectoral visual field loss with corresponding retinal whitening — demands urgent embolic source workup and cardiovascular risk assessment.",
+  "Vitreomacular Traction":
+    "Persistent adhesion of the posterior vitreous to the fovea that tractionally distorts the foveal architecture, causing metamorphopsia and reduced acuity — confirmed by OCT showing a focal vitreomacular attachment without complete PVD.",
+  "Epiretinal Membrane":
+    "A fibrocellular proliferation on the inner retinal surface causing wrinkling of the macula, metamorphopsia, and mild visual loss — distinguished from neovascular AMD by absent leakage on FFA and a surface membrane on OCT.",
+  "Choroidal Melanoma":
+    "The most common primary intraocular malignancy in adults, presenting as a pigmented dome-shaped choroidal mass with orange lipofuscin, acoustic hollowness on B-scan, and metastatic potential — treated with plaque brachytherapy.",
+  "Acanthamoeba Keratitis":
+    "A sight-threatening protozoal corneal infection associated with contact lens use and water exposure, characterised by severe pain disproportionate to clinical signs, perineural infiltrates, and resistance to broad-spectrum antibiotics.",
+  "Herpes Simplex Keratitis":
+    "Recurrent corneal infection by herpes simplex virus causing a dendritic epithelial ulcer with terminal bulbs, reduced corneal sensation, and risk of progressive stromal scarring with repeated episodes — treated with topical antivirals.",
+  "Fuchs' Endothelial Dystrophy":
+    "A bilateral progressive corneal endothelial dystrophy characterised by guttae formation, endothelial cell loss, and corneal oedema that is worst in the morning and improves through the day as epithelial fluid evaporates.",
+  "Acute Angle-Closure Glaucoma":
+    "An ophthalmic emergency caused by sudden iridocorneal angle closure, precipitating a rapid IOP rise with severe ocular pain, nausea, haloes, corneal oedema, and a mid-dilated non-reactive pupil.",
+  "Normal Tension Glaucoma":
+    "Glaucomatous optic neuropathy with characteristic field loss and RNFL thinning despite IOP consistently within the statistically normal range — associated with nocturnal hypotension and requiring exclusion of compressive optic neuropathy.",
+  "Pigmentary Glaucoma":
+    "A glaucoma subtype in young myopic men caused by liberation of iris pigment into the anterior segment, depositing on the trabecular meshwork (Krukenberg spindle), causing exercise-induced IOP spikes and early glaucomatous damage.",
+  "Pseudoexfoliation Glaucoma":
+    "Glaucoma secondary to exfoliative material obstructing the trabecular meshwork, characterised by highly asymmetric IOP, zonular instability, poor mydriasis, and a higher rate of glaucoma progression than primary open-angle glaucoma.",
+  "Giant Cell Arteritis":
+    "A granulomatous large-vessel vasculitis of the elderly causing arteritic anterior ischaemic optic neuropathy — recognised by jaw claudication, scalp tenderness, dramatically elevated ESR/CRP, and pale disc swelling on fundoscopy.",
+  "Thyroid Eye Disease":
+    "An autoimmune orbitopathy associated with thyroid dysfunction causing proptosis, lid retraction, restrictive myopathy of the inferior and medial recti, and — in severe cases — compressive optic neuropathy requiring urgent treatment.",
+  "Myasthenia Gravis":
+    "An autoimmune neuromuscular junction disorder causing fatigable ptosis and variable diplopia, confirmed by positive ice pack test, anti-AChR antibodies, and improvement with acetylcholinesterase inhibitors — associated with thymoma.",
+  "Vogt-Koyanagi-Harada Syndrome":
+    "A bilateral granulomatous panuveitis from autoimmune attack on melanocytes, characterised by a prodrome of meningismus and dysacusis followed by uveitis with exudative detachments, and later vitiligo and poliosis.",
+  "Sympathetic Ophthalmia":
+    "A bilateral granulomatous uveitis occurring weeks to years after penetrating ocular trauma, where sensitisation to uveal antigens in the injured eye triggers granulomatous inflammation in the fellow (sympathising) eye.",
+  "Sebaceous Cell Carcinoma":
+    "A malignant eyelid tumour arising from meibomian or Zeis glands, notorious for masquerading as recurrent chalazion or chronic blepharitis (masquerade syndrome), with pagetoid conjunctival spread and systemic metastatic risk.",
+  "Floppy Eyelid Syndrome":
+    "A condition of lax, spontaneously everted upper lids — typically in obese men with obstructive sleep apnoea — causing chronic papillary conjunctivitis on the superior tarsal plate from nocturnal lid eversion against the pillow.",
+  "Posterior Scleritis":
+    "Inflammation of the posterior sclera causing severe boring ocular pain, choroidal folds, exudative retinal detachment, and the pathognomonic T-sign on B-scan ultrasound — commonly associated with rheumatoid arthritis.",
+  // Legacy definitions retained for fallback
   "Optic Neuritis":
     "Inflammatory demyelination of the optic nerve causing acute painful visual loss, strongly associated with multiple sclerosis.",
   "Central Serous Retinopathy":
     "Accumulation of subretinal fluid beneath the macula, typically in young men under stress, causing metamorphopsia and micropsia.",
   "Corneal Abrasion":
     "A superficial defect in the corneal epithelium caused by trauma, producing acute pain, tearing, and photophobia.",
-  "Angle Closure Glaucoma":
-    "Acute or chronic obstruction of the iridocorneal drainage angle, causing a rapid rise in intraocular pressure and potential optic nerve damage.",
-  "Normal Tension Glaucoma":
-    "Progressive optic neuropathy with characteristic glaucomatous field loss occurring despite consistently normal intraocular pressure.",
-  "Vitreous Haemorrhage":
-    "Bleeding into the vitreous cavity that obscures the visual axis, most commonly from retinal neovascularisation or trauma.",
-  Chalazion:
-    "A chronic, painless granulomatous lesion of the eyelid caused by obstruction and lipid spillage from a meibomian gland.",
-  Pterygium:
-    "A fleshy fibrovascular overgrowth from the conjunctiva onto the corneal surface, associated with chronic UV exposure.",
-  "Corneal Ulcer":
-    "A full-thickness epithelial defect with stromal involvement, typically caused by bacterial, viral, or fungal infection.",
-  "Retinitis Pigmentosa":
-    "A hereditary retinal dystrophy causing progressive photoreceptor degeneration, night blindness, and constricted visual fields.",
-  Uveitis:
-    "Intraocular inflammation affecting the uveal tract, which may be infectious, autoimmune, or idiopathic in origin.",
-  "Branch Retinal Vein Occlusion":
-    "Obstruction of a tributary retinal vein causing sectoral haemorrhages, macular oedema, and sudden visual field loss.",
-  "Central Retinal Artery Occlusion":
-    "Occlusion of the main retinal artery producing sudden, painless, profound monocular visual loss requiring emergency evaluation.",
+  "Anterior Uveitis":
+    "Inflammation of the anterior uveal tract presenting with pain, photophobia, and a hypopyon in severe cases.",
+  "Keratoconus":
+    "A progressive ectatic condition in which the cornea thins and steepens into a cone shape, inducing irregular astigmatism.",
 };
 
 function getDiagnosisDef(diagnosis: string): string {
@@ -845,7 +939,12 @@ function perfLabel(guessCount: number, won: boolean): string {
 
 export default function Optomdle() {
   const dayNumber = useMemo(getTodayDay, []);
-  const daily = useMemo(() => CASES[dayNumber % CASES.length], [dayNumber]);
+  const [viewingDay, setViewingDay] = useState<number>(dayNumber);
+
+  const daily = useMemo(
+    () => CASES[viewingDay % CASES.length],
+    [viewingDay],
+  );
 
   const [guesses, setGuesses] = useState<string[]>([]);
   const [hydrated, setHydrated] = useState(false);
@@ -863,7 +962,6 @@ export default function Optomdle() {
   const [cardAnimating, setCardAnimating] = useState<boolean[]>(
     Array(6).fill(false),
   );
-
   const [flashingCardIdx, setFlashingCardIdx] = useState(-1);
   const [userStats, setUserStats] = useState<UserStats>(DEFAULT_STATS);
   const [timeToMidnight, setTimeToMidnight] = useState("");
@@ -873,6 +971,9 @@ export default function Optomdle() {
   const prevHintsRef = useRef(0);
   const wrongGuessFlashRef = useRef(false);
 
+  const isArchive = viewingDay !== dayNumber;
+
+  // Initial hydration
   useEffect(() => {
     setGuesses(loadSaved(dayNumber));
     setUserStats(loadStats());
@@ -880,6 +981,7 @@ export default function Optomdle() {
     if (!localStorage.getItem("optomdle-seen")) setShowHowToPlay(true);
   }, [dayNumber]);
 
+  // Countdown to midnight
   useEffect(() => {
     const tick = () => {
       const now = new Date();
@@ -932,6 +1034,7 @@ export default function Optomdle() {
     }, delay);
   }, []);
 
+  // Mount / day-change effect — replay existing cards
   useEffect(() => {
     if (!hydrated || mountedRef.current) return;
     mountedRef.current = true;
@@ -940,13 +1043,13 @@ export default function Optomdle() {
     if (gameOver && hintsRevealed > 0) {
       setTimeout(() => setShowModal(true), (hintsRevealed - 1) * 380 + 800);
     }
-  }, [hydrated, hintsRevealed, gameOver, flipCard]);
+  }, [hydrated, hintsRevealed, gameOver, flipCard, viewingDay]);
 
+  // Flip new cards as hints unlock
   useEffect(() => {
     if (!hydrated || !mountedRef.current) return;
     if (hintsRevealed > prevHintsRef.current) {
       const start = prevHintsRef.current;
-      // Delay flip until after the red flash when triggered by a wrong guess
       const baseDelay = wrongGuessFlashRef.current ? 580 : 60;
       wrongGuessFlashRef.current = false;
       for (let i = start; i < hintsRevealed; i++) {
@@ -956,6 +1059,7 @@ export default function Optomdle() {
     }
   }, [hintsRevealed, hydrated, flipCard]);
 
+  // Autocomplete suggestions
   useEffect(() => {
     if (!input.trim()) {
       setSuggestions([]);
@@ -967,24 +1071,47 @@ export default function Optomdle() {
     );
   }, [input]);
 
+  // Navigate to a different day
+  const goToDay = useCallback(
+    (day: number) => {
+      if (day < 0 || day > dayNumber) return;
+      mountedRef.current = false;
+      prevHintsRef.current = 0;
+      wrongGuessFlashRef.current = false;
+      const saved = loadSaved(day);
+      setViewingDay(day);
+      setGuesses(saved);
+      setCardRevealed(Array(6).fill(false));
+      setCardAnimating(Array(6).fill(false));
+      setFlashingCardIdx(-1);
+      setInput("");
+      setSuggestions([]);
+      setShowModal(false);
+      setShowConfetti(false);
+      setStatusMsg("");
+    },
+    [dayNumber],
+  );
+
   const submit = () => {
     if (gameOver || !input.trim()) return;
     const trimmed = input.trim();
     const correct = trimmed.toLowerCase() === daily.diagnosis.toLowerCase();
     const next = [...guesses, trimmed];
     setGuesses(next);
-    persist(dayNumber, next);
+    persist(viewingDay, next);
     setInput("");
     setSuggestions([]);
     setActiveIdx(-1);
     if (correct) {
-      const stats = recordGame(dayNumber, true);
-      setUserStats(stats);
+      if (!isArchive) {
+        const stats = recordGame(dayNumber, true);
+        setUserStats(stats);
+      }
       setShowConfetti(true);
       setTimeout(() => setShowModal(true), 800);
     } else {
       const newWrong = wrongGuesses.length + 1;
-      // Flash the current card red before the next hint reveals
       wrongGuessFlashRef.current = true;
       setFlashingCardIdx(hintsRevealed - 1);
       setTimeout(() => setFlashingCardIdx(-1), 560);
@@ -992,8 +1119,10 @@ export default function Optomdle() {
         setStatusMsg(`Incorrect — hint ${newWrong + 1} unlocked`);
         setTimeout(() => setStatusMsg(""), 2200);
       } else {
-        const stats = recordGame(dayNumber, false);
-        setUserStats(stats);
+        if (!isArchive) {
+          const stats = recordGame(dayNumber, false);
+          setUserStats(stats);
+        }
         setTimeout(() => setShowModal(true), 700);
       }
     }
@@ -1015,7 +1144,6 @@ export default function Optomdle() {
     } else if (e.key === "Enter") {
       e.preventDefault();
       if (suggestions.length > 0) {
-        // Select highlighted suggestion or default to first — never submit mid-autocomplete
         const pick = activeIdx >= 0 ? suggestions[activeIdx] : suggestions[0];
         setInput(pick);
         setSuggestions([]);
@@ -1035,7 +1163,8 @@ export default function Optomdle() {
         g.toLowerCase() === daily.diagnosis.toLowerCase() ? "🟢" : "🔴",
       )
       .join("");
-    return `Optomdle #${dayNumber + 1} ${score}\n\n${rows}\n\nhttps://indika.dev/optomdle`;
+    const archiveTag = isArchive ? ` (Day ${viewingDay + 1})` : "";
+    return `Optomdle #${viewingDay + 1}${archiveTag} ${score}\n\n${rows}\n\nhttps://indika.dev/optomdle`;
   };
 
   const copyShare = () => {
@@ -1048,8 +1177,6 @@ export default function Optomdle() {
   if (!hydrated) return null;
 
   const label = perfLabel(guesses.length, won);
-
-  // Card classification
   const currentCardIdx = gameOver ? -1 : hintsRevealed - 1;
 
   return (
@@ -1063,24 +1190,31 @@ export default function Optomdle() {
           style={{
             position: "fixed",
             top: 16,
-            left: "50%",
-            transform: "translateX(-50%)",
+            left: 0,
+            right: 0,
             zIndex: 150,
-            background: "rgba(14,21,35,0.88)",
-            border: `1px solid ${T.coralBorder}`,
-            borderRadius: 100,
-            padding: "8px 18px",
-            fontSize: 13,
-            color: T.coral,
-            fontWeight: 600,
-            whiteSpace: "nowrap" as const,
-            backdropFilter: "blur(12px)",
-            WebkitBackdropFilter: "blur(12px)",
+            display: "flex",
+            justifyContent: "center",
             pointerEvents: "none",
-            animation: "optom-fadein 0.18s ease both",
           }}
         >
-          {statusMsg}
+          <div
+            style={{
+              background: "rgba(14,21,35,0.88)",
+              border: `1px solid ${T.coralBorder}`,
+              borderRadius: 100,
+              padding: "8px 18px",
+              fontSize: 13,
+              color: T.coral,
+              fontWeight: 600,
+              whiteSpace: "nowrap" as const,
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
+              animation: "optom-fadein 0.18s ease both",
+            }}
+          >
+            {statusMsg}
+          </div>
         </div>
       )}
 
@@ -1346,6 +1480,32 @@ export default function Optomdle() {
               </button>
             </div>
 
+            {/* Archive badge */}
+            {isArchive && (
+              <div
+                style={{
+                  textAlign: "center",
+                  marginBottom: 12,
+                }}
+              >
+                <span
+                  style={{
+                    fontSize: 10,
+                    fontWeight: 700,
+                    letterSpacing: "0.10em",
+                    textTransform: "uppercase" as const,
+                    color: T.text.muted,
+                    background: T.surface,
+                    border: `1px solid ${T.border}`,
+                    borderRadius: 100,
+                    padding: "4px 12px",
+                  }}
+                >
+                  Archive · Problem #{viewingDay + 1}
+                </span>
+              </div>
+            )}
+
             {/* Headline */}
             <div
               style={{
@@ -1364,7 +1524,6 @@ export default function Optomdle() {
               {label}
             </div>
 
-            {/* Guess count subtitle */}
             {won && (
               <div
                 style={{
@@ -1435,85 +1594,114 @@ export default function Optomdle() {
               {getDiagnosisDef(daily.diagnosis)}
             </p>
 
-            {/* Stats grid */}
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(4, 1fr)",
-                gap: 8,
-                marginBottom: 24,
-              }}
-            >
-              {[
-                { value: String(userStats.gamesPlayed), label: "Played" },
-                {
-                  value:
-                    userStats.gamesPlayed > 0
-                      ? `${Math.round((userStats.wins / userStats.gamesPlayed) * 100)}%`
-                      : "0%",
-                  label: "Win %",
-                },
-                {
-                  value: `${userStats.currentStreak}${userStats.currentStreak > 0 ? " 🔥" : ""}`,
-                  label: "Streak",
-                },
-                { value: String(userStats.maxStreak), label: "Best" },
-              ].map(({ value, label: statLabel }) => (
-                <div
-                  key={statLabel}
-                  style={{
-                    background: T.surface,
-                    border: `1px solid ${T.border}`,
-                    borderRadius: 10,
-                    padding: "14px 8px",
-                    textAlign: "center",
-                  }}
-                >
-                  <div
-                    style={{
-                      fontSize: 22,
-                      fontWeight: 700,
-                      color: T.text.primary,
-                      lineHeight: 1.2,
-                      marginBottom: 4,
-                    }}
-                  >
-                    {value}
-                  </div>
-                  <div
-                    style={{
-                      fontSize: 10,
-                      color: T.text.muted,
-                      letterSpacing: "0.06em",
-                      textTransform: "uppercase" as const,
-                    }}
-                  >
-                    {statLabel}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Next case countdown */}
-            <div
-              style={{
-                textAlign: "center",
-                marginBottom: 24,
-                color: T.text.muted,
-                fontSize: 13,
-              }}
-            >
-              <span style={{ marginRight: 6 }}>Next case in</span>
-              <span
+            {/* Stats grid — today only */}
+            {!isArchive && (
+              <div
                 style={{
-                  fontFamily: "monospace",
-                  color: T.text.secondary,
-                  fontWeight: 600,
+                  display: "grid",
+                  gridTemplateColumns: "repeat(4, 1fr)",
+                  gap: 8,
+                  marginBottom: 24,
                 }}
               >
-                {timeToMidnight}
-              </span>
-            </div>
+                {[
+                  { value: String(userStats.gamesPlayed), label: "Played" },
+                  {
+                    value:
+                      userStats.gamesPlayed > 0
+                        ? `${Math.round((userStats.wins / userStats.gamesPlayed) * 100)}%`
+                        : "0%",
+                    label: "Win %",
+                  },
+                  {
+                    value: `${userStats.currentStreak}${userStats.currentStreak > 0 ? " 🔥" : ""}`,
+                    label: "Streak",
+                  },
+                  { value: String(userStats.maxStreak), label: "Best" },
+                ].map(({ value, label: statLabel }) => (
+                  <div
+                    key={statLabel}
+                    style={{
+                      background: T.surface,
+                      border: `1px solid ${T.border}`,
+                      borderRadius: 10,
+                      padding: "14px 8px",
+                      textAlign: "center",
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontSize: 22,
+                        fontWeight: 700,
+                        color: T.text.primary,
+                        lineHeight: 1.2,
+                        marginBottom: 4,
+                      }}
+                    >
+                      {value}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: 10,
+                        color: T.text.muted,
+                        letterSpacing: "0.06em",
+                        textTransform: "uppercase" as const,
+                      }}
+                    >
+                      {statLabel}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Countdown (today) or Return to today (archive) */}
+            {!isArchive ? (
+              <div
+                style={{
+                  textAlign: "center",
+                  marginBottom: 24,
+                  color: T.text.muted,
+                  fontSize: 13,
+                }}
+              >
+                <span style={{ marginRight: 6 }}>Next case in</span>
+                <span
+                  style={{
+                    fontFamily: "monospace",
+                    color: T.text.secondary,
+                    fontWeight: 600,
+                  }}
+                >
+                  {timeToMidnight}
+                </span>
+              </div>
+            ) : (
+              <div
+                style={{ textAlign: "center", marginBottom: 24 }}
+              >
+                <button
+                  onClick={() => {
+                    goToDay(dayNumber);
+                    setShowModal(false);
+                  }}
+                  style={{
+                    background: "transparent",
+                    color: T.teal,
+                    border: `1px solid ${T.tealBorder}`,
+                    borderRadius: 10,
+                    padding: "10px 24px",
+                    fontSize: 13,
+                    fontWeight: 600,
+                    cursor: "pointer",
+                    fontFamily: "inherit",
+                    letterSpacing: 0.1,
+                  }}
+                >
+                  Today&apos;s Case →
+                </button>
+              </div>
+            )}
 
             {/* Emoji share card */}
             <div
@@ -1570,39 +1758,138 @@ export default function Optomdle() {
             "var(--font-geist-sans), system-ui, -apple-system, sans-serif",
         }}
       >
-        {/* Header */}
+        {/* Header with archive navigation */}
         <div
           style={{
-            textAlign: "center",
             padding: "18px 20px 12px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
-          <h1
+          {/* Prev problem button */}
+          <button
+            onClick={() => goToDay(viewingDay - 1)}
+            disabled={viewingDay <= 0}
+            aria-label="Previous problem"
             style={{
-              fontFamily:
-                "var(--font-instrument-serif), Georgia, 'Times New Roman', serif",
-              fontSize: 32,
-              fontWeight: 400,
-              letterSpacing: -0.3,
-              margin: "0 0 4px",
-              color: T.text.primary,
-              lineHeight: 1,
+              background: "none",
+              border: "none",
+              cursor: viewingDay <= 0 ? "default" : "pointer",
+              padding: "6px 10px",
+              fontFamily: "inherit",
+              flexShrink: 0,
+              display: "flex",
+              flexDirection: "column" as const,
+              alignItems: "center",
+              gap: 2,
+              minWidth: 64,
+              opacity: viewingDay <= 0 ? 0.25 : 1,
+              transition: "opacity 0.15s",
             }}
           >
-            Optomdle
-          </h1>
-          <p
+            <span style={{ fontSize: 18, color: T.text.secondary, lineHeight: 1 }}>←</span>
+            <span
+              style={{
+                fontSize: 9,
+                fontWeight: 700,
+                letterSpacing: "0.08em",
+                textTransform: "uppercase" as const,
+                color: T.text.muted,
+              }}
+            >
+              Prev
+            </span>
+            <span
+              style={{
+                fontSize: 10,
+                fontFamily: "monospace",
+                fontWeight: 600,
+                color: viewingDay <= 0 ? T.text.dim : T.teal,
+                letterSpacing: 0.2,
+              }}
+            >
+              {viewingDay > 0 ? `#${viewingDay}` : "—"}
+            </span>
+          </button>
+
+          {/* Title block */}
+          <div style={{ textAlign: "center", flex: 1 }}>
+            <h1
+              style={{
+                fontFamily:
+                  "var(--font-instrument-serif), Georgia, 'Times New Roman', serif",
+                fontSize: 32,
+                fontWeight: 400,
+                letterSpacing: -0.3,
+                margin: "0 0 4px",
+                color: T.text.primary,
+                lineHeight: 1,
+              }}
+            >
+              Optomdle
+            </h1>
+            <p
+              style={{
+                fontSize: 11,
+                color: isArchive ? T.teal : T.text.muted,
+                margin: 0,
+                letterSpacing: "0.07em",
+                textTransform: "uppercase" as const,
+                fontWeight: 500,
+              }}
+            >
+              {isArchive
+                ? `Archive · Problem #${viewingDay + 1}`
+                : `Problem #${dayNumber + 1}`}
+            </p>
+          </div>
+
+          {/* Next problem button */}
+          <button
+            onClick={() => goToDay(viewingDay + 1)}
+            disabled={viewingDay >= dayNumber}
+            aria-label="Next problem"
             style={{
-              fontSize: 11,
-              color: T.text.muted,
-              margin: 0,
-              letterSpacing: "0.07em",
-              textTransform: "uppercase" as const,
-              fontWeight: 500,
+              background: "none",
+              border: "none",
+              cursor: viewingDay >= dayNumber ? "default" : "pointer",
+              padding: "6px 10px",
+              fontFamily: "inherit",
+              flexShrink: 0,
+              display: "flex",
+              flexDirection: "column" as const,
+              alignItems: "center",
+              gap: 2,
+              minWidth: 64,
+              opacity: viewingDay >= dayNumber ? 0.25 : 1,
+              transition: "opacity 0.15s",
             }}
           >
-            Identify the diagnosis
-          </p>
+            <span style={{ fontSize: 18, color: T.text.secondary, lineHeight: 1 }}>→</span>
+            <span
+              style={{
+                fontSize: 9,
+                fontWeight: 700,
+                letterSpacing: "0.08em",
+                textTransform: "uppercase" as const,
+                color: T.text.muted,
+              }}
+            >
+              Next
+            </span>
+            <span
+              style={{
+                fontSize: 10,
+                fontFamily: "monospace",
+                fontWeight: 600,
+                color: viewingDay >= dayNumber ? T.text.dim : T.teal,
+                letterSpacing: 0.2,
+              }}
+            >
+              {viewingDay < dayNumber ? `#${viewingDay + 2}` : "—"}
+            </span>
+          </button>
         </div>
 
         {/* Clue Timeline */}
@@ -1703,8 +1990,6 @@ export default function Optomdle() {
           })}
         </div>
 
-        {/* Sticky input bar — renders outside the scroll content via fixed positioning */}
-
         {/* Dismissed Hypotheses */}
         {wrongGuesses.length > 0 && (
           <div
@@ -1782,7 +2067,6 @@ export default function Optomdle() {
           </div>
         )}
 
-        {/* Space so content isn't hidden behind the sticky bar */}
         {!gameOver && <div style={{ height: 120 }} />}
       </div>
 
@@ -1831,14 +2115,6 @@ export default function Optomdle() {
                   setActiveIdx(-1);
                 }}
                 onKeyDown={handleKey}
-                onFocus={() => {
-                  setTimeout(() => {
-                    inputRef.current?.scrollIntoView({
-                      block: "end",
-                      behavior: "smooth",
-                    });
-                  }, 300);
-                }}
                 onBlur={() => setTimeout(() => setSuggestions([]), 150)}
                 placeholder="Search diagnoses..."
                 autoComplete="off"
@@ -1857,7 +2133,6 @@ export default function Optomdle() {
                   boxShadow: T.shadow,
                 }}
               />
-              {/* Dropdown opens upward */}
               {suggestions.length > 0 && (
                 <div
                   style={{
