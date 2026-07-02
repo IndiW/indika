@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { SITE_URL } from "./lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +14,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Indika's Space",
-  description: "Personal canvas — explore, draw, and play around.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Indika Wijesundera — Software Engineer & Builder",
+    template: "%s · Indika Wijesundera",
+  },
+  description:
+    "Portfolio of Indika Wijesundera, a Toronto-based software engineer who ships full-stack products from zero to one.",
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({

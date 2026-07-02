@@ -76,6 +76,7 @@ const MAX_HISTORY = 50;
 
 // ── LocalStorage helpers ──────────────────────────────────────────────────────
 function loadLS<T>(key: string, fallback: T): T {
+  if (typeof window === "undefined") return fallback;
   try {
     const v = localStorage.getItem(key);
     return v ? JSON.parse(v) : fallback;
@@ -207,7 +208,13 @@ const PROJECTS: {
   {
     name: "Optomdle",
     desc: "WIP Wordle for optometry diagnoses.",
-    href: "/optomdle",
+    href: "https://optodle.com",
+    external: true,
+  },
+  {
+    name: "SystemDesigndle",
+    desc: "Daily system design concept puzzle.",
+    href: "/system-design-dle",
   },
 ];
 
@@ -358,34 +365,54 @@ function DefaultContent() {
       >
         CONTACT
       </text>
-      <text
+      <foreignObject
         x={0}
-        y={478}
-        fontSize={14}
-        fill={THEME.accent}
-        pointerEvents="all"
-        style={{ cursor: "pointer" }}
+        y={465}
+        width={540}
+        height={20}
         onPointerDown={stopProp}
-        onClick={() =>
-          window.open("https://github.com/IndiW", "_blank", "noopener")
-        }
       >
-        github.com/IndiW ↗
-      </text>
-      <text
+        <a
+          href="https://github.com/IndiW"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "flex",
+            fontSize: 14,
+            fontFamily: font,
+            color: THEME.accent,
+            textDecoration: "none",
+            lineHeight: "20px",
+            cursor: "pointer",
+          }}
+        >
+          github.com/IndiW ↗
+        </a>
+      </foreignObject>
+      <foreignObject
         x={0}
-        y={502}
-        fontSize={14}
-        fill={THEME.accent}
-        pointerEvents="all"
-        style={{ cursor: "pointer" }}
+        y={489}
+        width={540}
+        height={20}
         onPointerDown={stopProp}
-        onClick={() =>
-          window.open("https://www.linkedin.com/in/indika-wijesundera/")
-        }
       >
-        linkedin.com/in/indika-wijesundera ↗
-      </text>
+        <a
+          href="https://www.linkedin.com/in/indika-wijesundera/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "flex",
+            fontSize: 14,
+            fontFamily: font,
+            color: THEME.accent,
+            textDecoration: "none",
+            lineHeight: "20px",
+            cursor: "pointer",
+          }}
+        >
+          linkedin.com/in/indika-wijesundera ↗
+        </a>
+      </foreignObject>
     </g>
   );
 }
