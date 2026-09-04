@@ -216,6 +216,11 @@ const PROJECTS: {
     desc: "Daily system design concept puzzle.",
     href: "/system-design-dle",
   },
+  {
+    name: "Color Hunt Wheel",
+    desc: "Spin up color assignments for a photo hunt.",
+    href: "/color-hunt-wheel",
+  },
 ];
 
 function DefaultContent() {
