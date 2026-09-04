@@ -223,6 +223,21 @@ const PROJECTS: {
   },
 ];
 
+// Vertical rhythm, matching the gaps already established above (role text
+// -> divider = 24, divider -> bio = 32, section header -> first row = 28).
+const PROJECTS_START_Y = 232;
+const PROJECTS_ROW_HEIGHT = 30;
+const GAP_LAST_ROW_TO_DIVIDER = 24;
+const GAP_DIVIDER_TO_HEADER = 32;
+const GAP_HEADER_TO_FIRST_ROW = 28;
+const LINK_ROW_HEIGHT = 24;
+
+const lastProjectY = PROJECTS_START_Y + (PROJECTS.length - 1) * PROJECTS_ROW_HEIGHT;
+const dividerY = lastProjectY + GAP_LAST_ROW_TO_DIVIDER;
+const contactHeaderY = dividerY + GAP_DIVIDER_TO_HEADER;
+const githubLinkY = contactHeaderY + GAP_HEADER_TO_FIRST_ROW;
+const linkedinLinkY = githubLinkY + LINK_ROW_HEIGHT;
+
 function DefaultContent() {
   const font = "'system-ui','-apple-system',sans-serif";
 
@@ -350,9 +365,9 @@ function DefaultContent() {
 
       <line
         x1={0}
-        y1={420}
+        y1={dividerY}
         x2={540}
-        y2={420}
+        y2={dividerY}
         stroke={THEME.text.divider}
         strokeWidth={1}
         pointerEvents="none"
@@ -361,7 +376,7 @@ function DefaultContent() {
       {/* Contact — links are interactive */}
       <text
         x={0}
-        y={450}
+        y={contactHeaderY}
         fontSize={11}
         fill={THEME.text.section}
         fontWeight={600}
@@ -372,7 +387,7 @@ function DefaultContent() {
       </text>
       <foreignObject
         x={0}
-        y={465}
+        y={githubLinkY}
         width={540}
         height={20}
         onPointerDown={stopProp}
@@ -396,7 +411,7 @@ function DefaultContent() {
       </foreignObject>
       <foreignObject
         x={0}
-        y={489}
+        y={linkedinLinkY}
         width={540}
         height={20}
         onPointerDown={stopProp}

@@ -4,7 +4,7 @@ import { Instrument_Serif } from "next/font/google";
 export const metadata: Metadata = {
   title: "Color Hunt Wheel",
   description:
-    "Spin a color wheel to assign each person in your group a color to go hunt and shoot.",
+    "Hunt colors with friends",
 };
 
 const instrumentSerif = Instrument_Serif({
